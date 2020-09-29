@@ -5,8 +5,13 @@
 #ifndef EX04_TASK1_H
 #define EX04_TASK1_H
 
+
+#include <cstring>
+
+using namespace std;
+
 struct Person {
-    std::string name;
+    string name;
     unsigned age;
 };
 

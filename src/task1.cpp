@@ -4,11 +4,12 @@
 
 
 // #include <bits/stdc++.h>
-#include <cstring>
 #include <cmath>
 #include <string>
 
 #include "task1.h"
+
+using namespace std;
 
 int comp1(const void *a, const void *b) {
     return *(int *) a - *(int *) b;
@@ -35,8 +36,8 @@ int comp4(const void *a, const void *b) {
 int comp5(const void *a, const void *b) {
     // std::string x = reinterpret_cast<const char *>(*(char *) a);
 
-    std::string s = (const char *) a;
-    std::string t = (const char *) b;
+    string s = (const char *) a;
+    string t = (const char *) b;
     int cnts = 0, cntt = 0;
     for (auto x: s) cnts += (x == ' ' ? 1 : 0);
     for (auto x: t) cntt += (x == ' ' ? 1 : 0);
