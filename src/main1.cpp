@@ -1,4 +1,8 @@
-//
-// Created by stanislav on 29/09/2020.
-//
+/*
+ * @author Stanislav Stoianov
+ */
+
+int main() {
+    return 0;
+}
 
