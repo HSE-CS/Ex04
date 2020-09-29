@@ -19,16 +19,16 @@ int comp3(const void* a, const void* b){
 }
 
 int comp4(const void* a, const void* b){
-    return strlen(*(const char**)a) - strlen(*(const char**)b);
+    return (int)(strlen(*(const char**)a) - strlen(*(const char**)b));
 }
 
 int comp5(const void* a, const void* b){
     int count1 = 0, count2 = 0;
     for (int i = 0; i < strlen(*(const char**)a); i++){
-        if (*(const char**)a == " ") count1++;
+        if ((*(const char**)a) == " ") count1++;
     }
     for (int i = 0; i < strlen(*(const char**)b); i++){
-        if (*(const char**)b == " ") count2++;
+        if ((*(const char**)b) == " ") count2++;
     }
     return count1-count2;
 }
