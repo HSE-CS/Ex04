@@ -2,7 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
+#include <string.h>
 
 int comp1(const void* a, const void* b) {
 	return (*(int*)a - *(int*)b);
