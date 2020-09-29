@@ -44,7 +44,7 @@ int comp5(const void* a, const void* b)
 
 int comp6(const void* a, const void* b)
 {
-    if ((*(Person*)a).age == (*(Person*)a).age) return 0;
-    if ((*(Person*)a).age > (*(Person*)a).age) return 1;
-    if ((*(Person*)a).age < (*(Person*)a).age) return -1;
+    if ((*(Person*)a).age == (*(Person*)b).age) return 0;
+    if ((*(Person*)a).age > (*(Person*)b).age) return 1;
+    if ((*(Person*)a).age < (*(Person*)b).age) return -1;
 };
