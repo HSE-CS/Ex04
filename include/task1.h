@@ -1,12 +1,22 @@
-#include "../src/task1.cpp"
+#ifndef TASK1_H
+#define TASK1_H
+
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <cstring>
+
 struct Person
 {
-    string   name;
+    std::string name;
     unsigned age;
-}
-bool comp1 (int a, int b);
-bool comp2 (double a, double b);
-bool comp3 (const char* a, const char* b);
-bool comp4 (const char* a, const char* b);
-bool comp5 (const char* a, const char* b);
-bool comp6 (Person a, Person b);
+};
+
+int comp1(const void * a, const void * b);
+int comp2(const void * a, const void * b);
+int comp3(const void * a, const void * b);
+int comp4(const void * a, const void * b);
+int comp5(const void * a, const void * b);
+int comp6(const void * a, const void * b);
+
+#endif

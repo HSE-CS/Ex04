@@ -1,30 +1,29 @@
-#include <algorithm>
-#include <iostream>
-#include <cstdlib>
-#include <fstream>
 #include "../include/task1.h"
-using namespace std; 
-struct Person
-{
-    string   name;
-    unsigned age;
+
+int comp1(const void * a, const void * b){
+    return ( *( int* )a - *( int* )b );
 }
 
-bool comp1 (int a, int b){
-    return a > b;
+int comp2(const void * a, const void * b){
+    return ( *( double* )a - *( double* )b );
 }
-bool comp2 (double a, double b){
-    return a > b;
+
+int comp3(const void * a, const void * b){
+    return strcmp((char*)a, (char*)b);
 }
-bool comp3 (const char* a, const char* b){
-    return a > b;
+
+int comp4(const void * a, const void * b){
+    return (strlen((char*)a) - strlen((char*)b));
 }
-bool comp4 (const char* a, const char* b){
-    return a.length() > b.length();
+
+int comp5(const void * a, const void * b){
+    int count1 = 0;
+    int count2 = 0;
+    for(unsigned int i=0; i<strlen((char*)a); i++)if(((char*)a)[i]==' ') count1++;
+    for(unsigned int i=0; i<strlen((char*)b); i++)if(((char*)b)[i]==' ') count2++;
+    return count1 - count2;        
 }
-bool comp5 (const char* a, const char* b){
-    return count(a.begin(), a.end(), ' ') > count(b.begin(), b.end(), ' ');
-}
-bool comp6 (struct Person a, struct Person b){
-    return a.age > b.age;
-}
+
+int comp6(const void * a, const void * b){
+    return ((Person*)a)->age - ((Person*)b)->age;
+} 
