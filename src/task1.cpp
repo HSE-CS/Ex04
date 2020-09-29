@@ -5,7 +5,7 @@
 
 #include <bits/stdc++.h>
 
-#include <task1.h>
+#include "task1.h"
 
 int comp1(const void *a, const void *b) {
     return *(int *) a - *(int *) b;
@@ -15,7 +15,7 @@ int comp2(const void *a, const void *b) {
     double x, y;
     x = *(double *) a;
     y = *(double *) b;
-    double eps = 1e-7;
+    double eps = 1e-10;
     if (fabs(x - y) < eps) return 0;
     if (x - y > eps) return 1;
     return -1;

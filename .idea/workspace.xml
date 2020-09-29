@@ -35,17 +35,10 @@
   <component name="ChangeListManager">
     <list default="true" id="72668063-5a80-42b7-97e2-4b6fed5c6fd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/src/main1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1.dir/src/main1.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/src/task1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/task1_lib.dir/src/task1.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libtask1_lib.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libtask1_lib.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/task1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/task1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/task1.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/task1.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/task1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Ex02" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex02" afterDir="false" />
@@ -119,7 +112,7 @@
       <workItem from="1601381586193" duration="93000" />
       <workItem from="1601381698438" duration="27000" />
       <workItem from="1601381751562" duration="324000" />
-      <workItem from="1601382076364" duration="2394000" />
+      <workItem from="1601382076364" duration="2780000" />
     </task>
     <servers />
   </component>
@@ -151,22 +144,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="324" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1601382070406" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1601384464450">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1601384827856">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1601384464450" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1601384464450">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1601384827856" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1601384827855">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1601384464450" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1601384464449">
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1601384827855" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1601384827855">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1601384464449" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1601384464450">
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1601384827855" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1601384827856">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1601384464450" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1601384827856" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1601381848042">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

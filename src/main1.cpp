@@ -10,6 +10,6 @@ using namespace std;
 
 
 int main() {
-    
+    cout << (double)1.0 - (double)1e-0;
     return 0;
 }
