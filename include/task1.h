@@ -15,11 +15,11 @@ struct Person
     unsigned age;
 };
 
-int comp1( int* a, int* b );
-int comp2( double* a, double* b );
-int comp3( string * a, string * b );
-int comp4( string * a, string * b );
-int comp5( string * a, string * b );
-int comp6( Person * a, Person * b );
+int comp1( const void * a, const void * b );
+int comp2( const void * a, const void * b );
+int comp3( const void * a, const void * b );
+int comp4( const void * a, const void * b );
+int comp5( const void * a, const void * b );
+int comp6( const void * a, const void * b );
 
 #endif
