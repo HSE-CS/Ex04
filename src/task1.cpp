@@ -9,7 +9,7 @@ int comp1( const void* x, const void* y)
 int comp2(const void* x, const void* y)
 {
 
-	return *(int*)x - *(int*)y;
+	return *((int*)x) - *((int*)y);
 }
 int comp3(const void* str1, const void* str2)
 {
