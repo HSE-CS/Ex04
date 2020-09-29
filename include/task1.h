@@ -1,6 +1,11 @@
 #ifndef TASK1_H
 #define TASK1_H
 
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cstdlib>
+
 using namespace std;
 
 struct Person
