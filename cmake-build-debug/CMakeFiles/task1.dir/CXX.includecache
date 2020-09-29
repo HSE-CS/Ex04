@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/task1.h
+cstring
+-
+string
+-
+
+/home/toliman/Projects/HSE-CS/EX04/Ex04/src/main1.cpp
+task1.h
+/home/toliman/Projects/HSE-CS/EX04/Ex04/src/task1.h
+iostream
+-
+
