@@ -22,7 +22,19 @@ int comp4(const void *a, const void *b)
 
 int comp5( const void* a, const void* b )
 {
-    return 0;
+    int num_a = 0;
+    int num_b = 0;
+    string str_a = *(const char **)a;
+    string str_b = *(const char **)b;
+    for (int i = 0; i < str_a.length(); i++){
+        if (str_a[i] == ' ')
+            num_a++;
+    }
+    for (int i = 0; i < str_b.length(); i++){
+        if (str_b[i] ==  ' ')
+            num_b++;
+    }
+    return num_a - num_b;
 }
 
 int comp6( const void* a, const void* b )
