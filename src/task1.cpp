@@ -16,12 +16,12 @@ int comp4 (const void* a, const void* b) {
 
 int space_count(const char* s){
     int count = 0;
-    const char* p = s;
+    char* p = const_cast<char *>(s);
     while( (p = strchr(p, ' ')) ) ++count, ++p;
     return count;
 }
 
-bool comp5 (const char* a, const char* b) {
+int comp5 (const void* a, const void* b) {
     return space_count(*(const char**) a) - space_count(*(const char**) b);
 }
 int comp6 (const void* a, const void* b){
