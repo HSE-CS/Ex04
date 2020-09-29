@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string.h>
 
-struct person {
+struct Person {
 	std::string name;
 	unsigned int age;
 };
