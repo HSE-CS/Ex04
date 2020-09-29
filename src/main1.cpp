@@ -1,4 +1,6 @@
-//
-// Created by Иван on 29.09.2020.
-//
+#include <iostream>
+#include "../include/task1.h"
 
+int main(){
+
+};
