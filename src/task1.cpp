@@ -18,11 +18,11 @@ int comp2( const void * a, const void * b ) {
 }
 
 int comp3( const void * a, const void * b ) {
-    return ( strcmp(*(const char**)a, *(const char**)b));
+    return (strcmp(*((char**)a), *((char**)b)));
 }
 
 int comp4( const void * a, const void * b ) {
-    return ( strlen(*( const char ** )a) - strlen(*( const char ** )b ));
+    return (strlen(*((char**)a)) - strlen(*((char**)b)));
 }
 
 int comp5( const void * a, const void * b ) {
