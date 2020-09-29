@@ -1,12 +1,12 @@
+#include <string>
 #ifndef TASK1_H
 #define TASK1_H
 
-#include <string>
 using namespace std;
 
 struct Person
 {
-    string   name;
+    string name;
     unsigned age;
 };
 

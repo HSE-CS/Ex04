@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string.h>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ int comp3(const void* a, const void* b)
 int comp4(const void* a, const void* b)
 {
     return (strlen(*(const char**)a) - strlen(*(const char**)b));
-    
+
 }
 
 int comp5(const void* a, const void* b)
