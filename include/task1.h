@@ -4,9 +4,15 @@
 
 #ifndef TASK1_TASK1_H
 #define TASK1_TASK1_H
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
 struct Person
 {
-    std::string name;
+    string name;
     unsigned age;
 };
 
