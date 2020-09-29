@@ -1,6 +1,7 @@
 #include "task1.h"
 #include <string>
 #include <cstring>
+#include <iostream>
 using namespace std;
 
 int comp1( const void* a, const void* b ) {
