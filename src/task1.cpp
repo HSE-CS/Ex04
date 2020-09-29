@@ -28,8 +28,16 @@ int comp4( const void * a, const void * b ) {
 int comp5( const void * a, const void * b ) {
     string str1 = *(const char**)a;
     string str2 = *(const char**)b;
-    int c = count(str1.begin(), str1.end(), ' ');
-    int d = count(str2.begin(), str2.end(), ' ');
+    int c = 0;
+    int d = 0;
+    for (char ch1 : str1) {
+        if (ch1 == ' ')
+            c += 1;
+    }
+    for (char ch2 : str2) {
+        if (ch2 == ' ')
+            d += 1;
+    }
     return ( c - d );
 }
 
