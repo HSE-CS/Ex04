@@ -2,6 +2,8 @@
 // Created by sharg on 29.09.2020.
 //
 #include "task1.h"
+#include <cstring>
+using namespace std;
 bool comp1(int first,int second){
     return first<second;
 }
