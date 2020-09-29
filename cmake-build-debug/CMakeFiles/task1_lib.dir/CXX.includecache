@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/task1.h
+string.h
+-
+vector
+-
+iostream
+-
+
+C:/Disk_D/My projects/C++/Ex04/src/main1.cpp
+task1.h
+C:/Disk_D/My projects/C++/Ex04/src/task1.h
+
+C:/Disk_D/My projects/C++/Ex04/src/task1.cpp
+task1.h
+C:/Disk_D/My projects/C++/Ex04/src/task1.h
+
