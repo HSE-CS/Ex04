@@ -8,8 +8,12 @@ int comp1( const void* x, const void* y)
 }
 int comp2(const void* x, const void* y)
 {
-
-	return *((int*)x) - *((int*)y);
+	if (*(double*)x - *(double*)y > 0)
+		return 1;
+	if (*(double*)x - *(double*)y < 0)
+		return -1;
+	if (*(double*)x - *(double*)y == 0)
+		return 0;
 }
 int comp3(const void* str1, const void* str2)
 {
