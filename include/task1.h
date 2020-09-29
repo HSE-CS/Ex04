@@ -1,4 +1,7 @@
 #include <string>
+#include <algorithm>
+#include <iostream>
+#include <cstring>
 using namespace std;
 struct Person
 {
