@@ -13,6 +13,7 @@ int comp1(const void * a, const void * b){
     return ( *( int* )a - *( int* )b );
 }
 int comp2(const void* a, const void* b)
+{
     //  return a - b;
     if (*(double*)a-*(double *)b>0.0)
         return 1;
