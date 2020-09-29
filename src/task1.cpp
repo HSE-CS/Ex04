@@ -21,14 +21,12 @@ int comp4(const void* a, const void* b){
 int comp5(const void* a, const void* b){
     int result_1;
     int result_2;
-    string stroka_1= *(const char** )a;
-    string stroka_2= *(const char** )b;
-    for(int i=0;i<stroka_1.length();i++){
-        if (stroka_1[i] == ' ')
+    for(int i=0;i<strlen( *( const char** )a);i++){
+        if ((*(const char **) a)[i]== ' ')
             result_1++;
     }
-    for(int i=0;i<stroka_2.length();i++){
-        if (stroka_2[i] == ' ')
+    for(int i=0;i<strlen( *( const char** )b);i++){
+        if ((*(const char **) b)[i]== ' ')
             result_2++;
     }
     if (result_1 == result_2)
