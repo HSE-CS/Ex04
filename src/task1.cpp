@@ -3,6 +3,8 @@
 //
 #include "task1.h"
 
+#include <cstring>
+
 bool comp1(int first,int second){
     return first<second;
 }
