@@ -13,18 +13,18 @@ int comp2(const void* a, const void* b)
 
 int comp3(const void* a, const void* b) 
 {
-	return (strcmp((const char*)a, (const char*)b));
+	return (strcmp(*(char**)a, *(char**)b));
 }
 
 int comp4(const void* a, const void* b)
 {
-	return (strlen((const char*)a) - strlen((const char*)b));
+	return (strlen(*(char**)a) - strlen(*(char**)b));
 }
 
 int comp5(const void* a, const void* b)
 {
-	const char* str1 = (const char*)a;
-	const char* str2 = (const char*)b;
+	const char* str1 = *(const char**)a;
+	const char* str2 = *(const char**)b;
 	unsigned int len_str1 = 0, len_str2 = 0;
 	int i = 0, j = 0;
 	char gap = ' ';
