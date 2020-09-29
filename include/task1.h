@@ -27,8 +27,8 @@ int comp4(const void* a, const void* b){
     return strlen(*(char**)a) - strlen(*(char**)b);
 }
 int comp5(const void* a, const void* b){
-    string str1(a);
-    string str2(b);
+    string str1(*(char**)a);
+    string str2(*(char**)b);
     return count(str1.begin(), str1.end(), ' ') - count(str2.begin(), str2.end(), ' ') ;
 }
 int comp6(const void* a, const void* b) {
