@@ -27,7 +27,7 @@ bool comp4 (const char* a, const char* b) {
 
 int space_count(const char* s){
     int count = 0;
-    char* p = s;
+    const char* p = s;
     while( (p = strchr(p, ' ')) ) ++count, ++p;
     return count;
 }
