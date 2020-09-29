@@ -10,7 +10,7 @@ using namespace std;
 
 struct Person
 {
-    string name;
+    std::string name;
     unsigned age;
 };
 
