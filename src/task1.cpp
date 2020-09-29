@@ -7,7 +7,7 @@ int comp1(const void * a, const void * b)
 
 int comp2(const void * a, const void * b)
 {
-    return int( *( double* )a - *( double* )b );
+    return ( *( double* )a - *( double* )b )>0.0? 1 :-1;
 }
 
 int comp3(const void * a, const void * b)
