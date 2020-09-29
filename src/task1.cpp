@@ -5,7 +5,7 @@ int comp1 (const void* a, const void* b) {
 }
 
 int comp2 (const void* a, const void* b) {
-    return (int) (round(*(double*) a - *(double*) b));
+    return (int) (ceil(*(double*) a - *(double*) b));
 }
 int comp3 (const void* a, const void* b) {
     return strcmp(*(const char**) a, *(const char**) b);
