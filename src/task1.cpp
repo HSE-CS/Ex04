@@ -3,7 +3,7 @@
 using namespace std;
 
 int comp1( const void * a, const void * b ) {
-    return ( *( unsigned int* )a - *( unsigned int* )b );
+    return ( *( int* )a - *( int* )b );
 }
 
 int comp2( const void * a, const void * b ) {
