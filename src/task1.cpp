@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <iostream>
-#include <stdlib>
+//#include <stdlib>
 #include "../include/task1.h"
 using namespace std;
 
