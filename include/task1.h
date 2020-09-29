@@ -19,5 +19,5 @@ int comp5(const void* a, const void* b);
 int comp6(const void* a, const void* b);
 
 
-#endif // !COMP_H
+#endif // !COMP_H//
 
