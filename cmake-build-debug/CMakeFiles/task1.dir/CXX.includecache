@@ -7,7 +7,9 @@
 #IncludeRegexTransform: 
 
 ../include/task1.h
-iostream
+string
+-
+algorithm
 -
 
 /Users/aleksandrgrachev/CLionProjects/Ex04/src/main1.cpp
