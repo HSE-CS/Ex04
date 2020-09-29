@@ -34,10 +34,15 @@ int comp5(const void* str1, const void* str2)
 	int k1 = 0;
 	int k2 = 0;
 	int i = 0;
-	while ( str_1[i] != '\0' && str_2[i] != '\0')
+	while ( str_1[i] != '\0')
 	{
 		if (str_1[i] == ' ') k1++;
-		if (str_1[i] == ' ') k2++;
+		i++;
+	}
+	i = 0;
+	while ( str_2[i] != '\0' )
+	{
+	   	if ( str_2[i] == ' ') k2++;
 		i++;
 	}
 	return k1-k2;
