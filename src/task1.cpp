@@ -3,7 +3,10 @@
 //
 
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <cstring>
+#include <cmath>
+#include <string>
 
 #include "task1.h"
 
