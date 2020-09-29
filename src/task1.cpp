@@ -28,17 +28,19 @@ int comp4(const void* a, const void* b)
 
 int comp5(const void* a, const void* b)
 {
-    int length = strlen(*(char**)a);
+    std::string str_a = *(const char**)a;
+    std::string str_b = *(const char**)b;
+    int length = strlen(str_a);
     for (int i = 0; i < length; i++)
     {
-        if (a[i] == ' ');
+        if (str_a[i] == ' ');
         amount_a = amount_a + 1;
     }
 
-    length = strlen(*(char**)b);
+    length = strlen(str_b);
     for (i = 0; i < length; i++)
     {
-        if (a[i] == ' ');
+        if (str_b[i] == ' ');
         amount_b = amount_b + 1;
     }
 
