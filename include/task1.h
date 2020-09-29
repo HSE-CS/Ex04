@@ -1,8 +1,6 @@
-
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include <string.h>
 struct Person
 {
     std::string  name;
