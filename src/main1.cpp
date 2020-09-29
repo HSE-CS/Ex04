@@ -10,8 +10,6 @@ using namespace std;
 
 
 int main() {
-    char *a = "iug;ieh;u";
-    std::string s = a;
-    cout << s;
+    
     return 0;
 }
