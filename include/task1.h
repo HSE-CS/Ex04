@@ -13,12 +13,10 @@
 
 using namespace std;
 
-const size_t LARGE_SIZE = 1000000;
-
-struct rnd {
-    int operator()() {
-        return rand() % LARGE_SIZE;
-    }
+struct Person
+{
+    string name;
+    unsigned age;
 };
 
 int comp1(const void *a, const void *b);

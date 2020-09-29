@@ -6,11 +6,7 @@
 
 using namespace std;
 
-struct Person
-{
-    string name;
-    unsigned age;
-};
+
 
 int comp1(const void *a, const void *b)
 {
@@ -42,12 +38,13 @@ int comp5(const void *a, const void *b)
            c1++;
 
 
-       for(int i = 0; i<strlen(((*(char **)b))); i++)
-        if(((*(char **)b))[i] == ' ')
-            c2++;
+   for(int i = 0; i<strlen(((*(char **)b))); i++)
+       if(((*(char **)b))[i] == ' ')
+           c2++;
 
    return c1 - c2;
 }
+
 int comp6(const void *a, const void *b)
 {
    return (((Person*)a)->age) - (((Person*)b)->age);
