@@ -1,5 +1,5 @@
-#ifndef TASK1_H
-#define TASK1_H
+#ifndef TASK1_TASK1_H
+#define TASK1_TASK1_H
 #include <cstring>
 #include <string>
 using namespace std;
