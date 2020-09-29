@@ -21,7 +21,7 @@ int comp4(const void* a, const void* b) {
 
 int comp5(const void* a, const void* b) {
 	int c1=0, c2=0; //c1 = counter for string a, c2 = counter for string b
-	int s1 = strlen(*(const char**)a), s2 = strlen(*(const char**)a); // s1 = size of string a, s2 = size of string b
+	int s1 = strlen(*(const char**)a), s2 = strlen(*(const char**)b); // s1 = size of string a, s2 = size of string b
 	for (int i = 0; i < s1 ; i++) {
 		if ((*(const char**)a)[i] == ' ')
 			c1++;
