@@ -10,12 +10,7 @@ int comp2(const void* one, const void* two) {
 }
 
 int comp3(const void* one, const void* two) {
-	int i(0);
-	while (*(*(const char**)one + i) != '\0' || *(*(const char**)two + i) != '\0') {
-		if (*(*(const char**)one + i) != *(*(const char**)two + i)) return -1;
-		else i++; 
-	}
-	return 0;
+	return (*(*(const char**)one) > * (*(const char**)two)) - (*(*(const char**)two) > * (*(const char**)one));
 }
 
 int comp4(const void* one, const void* two) {
@@ -37,5 +32,5 @@ int comp5(const void* one, const void* two) {
 }
 
 int comp6(const void* one, const void* two) {
-	return ((*(Person*)one).age > (*(Person*)two).age) - ((*(Person*)two).age > (*(Person*)one).age);
+	return (((Person*)one)->age > ((Person*)two)->age) - (((Person*)two)->age > ((Person*)one)->age);
 }

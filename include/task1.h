@@ -1,11 +1,12 @@
 #ifndef COMPARE_H
 #define COMPARE_H
-#include <string.h>
+#include <string>
+#include <cstring>
 using namespace std;
 
 struct Person
 {
-    string name;
+    std::string name;
     unsigned age;
 };
 
