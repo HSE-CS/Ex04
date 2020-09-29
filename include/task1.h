@@ -6,9 +6,9 @@ struct Person
     std::string  name;
     unsigned age;
 };
-int comp1(int first,int second);
-int comp2(double first,double second);
-int comp3(const char *first,const char *second);
-int comp4(const char *first,const char *second);
-int comp5(const char *first,const char *second);
-int comp6(Person *first,Person *second);
+int comp1(const void* a, const void* b);
+int comp2(const void* a, const void* b);
+int comp3(const void* a, const void* b);
+int comp4(const void* a, const void* b);
+int comp5(const void* a, const void* b);
+int comp6(const void* a, const void* b);
