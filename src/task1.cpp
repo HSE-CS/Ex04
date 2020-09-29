@@ -6,7 +6,7 @@ int comp1(const void* a, const void* b) {
 }
 
 int comp2(const void* a, const void* b) {
-	return (*(double*)a - *(double*)b);
+	return (*(double*)b- *(double*)a);
 }
 
 int comp3(const void* a, const void* b) {
