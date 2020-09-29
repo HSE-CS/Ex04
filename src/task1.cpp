@@ -19,8 +19,8 @@ int comp4(const void* a, const void* b){
     return strlen( *( const char** )a)- strlen(*( const char** )b);
 }
 int comp5(const void* a, const void* b){
-    int result_1;
-    int result_2;
+    int result_1=0;
+    int result_2=0;
     for(int i=0;i<strlen( *( const char** )a);i++){
         if ((*(const char **) a)[i]== ' ')
             result_1++;
