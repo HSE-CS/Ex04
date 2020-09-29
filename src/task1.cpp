@@ -16,16 +16,17 @@ int comp2 (const void* a, const void* b) {
 }
 
 int comp3 (const void* a, const void* b) {
-	return strcmp( (const char*)a, (const char*)b );
+	return strcmp( *(const char**)a, *(const char**)b );
 }
 
 int comp4 (const void* a, const void* b) {
-	return int((*(std::string*)a).length() - (*(std::string*)b).length());
+
+	return int(( std::string(*(const char**)a).length() - std::string(*(const char**)b).length()));
 }
 
 int comp5 (const void* a, const void* b) {
-	std::string str1 = *(std::string*)a;
-	std::string str2 = *(std::string*)b;
+	std::string str1 = std::string(*(const char**)a);
+	std::string str2 = std::string(*(const char**)b);
 	int a1{0}, b1{0};
 
 
