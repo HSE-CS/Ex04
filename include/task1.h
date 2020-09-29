@@ -1,13 +1,11 @@
-//
-// Created by sharg on 29.09.2020.
-//
 
-#ifndef TASK1_TASK1_H
-#define TASK1_TASK1_H
 #include <iostream>
+#include <cstdlib>
+#include <string>
+#include <string.h>
 struct Person
 {
-    std::string name;
+    std::string  name;
     unsigned age;
 };
 bool comp1(int first,int second);
@@ -16,4 +14,3 @@ bool comp3(const char *first,const char *second);
 bool comp4(const char *first,const char *second);
 bool comp5(const char *first,const char *second);
 bool comp6(Person *first,Person *second);
-#endif //TASK1_TASK1_H
