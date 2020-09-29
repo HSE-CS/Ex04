@@ -9,7 +9,7 @@ int comp1(const void* a, const void* b){
 
 int comp2(const void* a, const void* b){
     double eps = 1e-10;
-    if(abs(*(double*)a - *(double*)b) < eps){
+    if(fabs(*(double*)a - *(double*)b) < eps){
         return 0;
     }
     else{
