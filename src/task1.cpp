@@ -1,28 +1,17 @@
-#include <iostream>
-#include <algorithm>
-#include <string>
-#include <string.h>
+#include "task1.h"
 
-using namespace std;
-
-struct Person
-{
-    string   name;
-    unsigned age;
-};
-
-bool comp1 (int a, int b) {
-    return a < b;
+int comp1 (const void* a, const void* b) {
+    return (*(int*) a - *(int*) b);
 }
 
-bool comp2 (double a, double b) {
-    return a < b;
+int comp2 (const void* a, const void* b) {
+    return (int) (*(double*) a - *(double*) b);
 }
-bool comp3 (const char* a, const char* b) {
-    return a < b;
+int comp3 (const void* a, const void* b) {
+    return strcmp(*(const char**) a, *(const char**) b);
 }
-bool comp4 (const char* a, const char* b) {
-    return sizeof(a) < sizeof(b);
+int comp4 (const void* a, const void* b) {
+    return (int) (strlen(*(const char**) a) - strlen(*(const char**) b));
 }
 
 int space_count(const char* s){
@@ -33,8 +22,8 @@ int space_count(const char* s){
 }
 
 bool comp5 (const char* a, const char* b) {
-    return space_count(a) < space_count(b);
+    return space_count(*(const char**) a) - space_count(*(const char**) b);
 }
-bool comp6 (const struct Person& a, const struct Person& b) {
-    return a.age < b.age;
+int comp6 (const void* a, const void* b){
+    return (int) ((*(Person*) a).age - (*(Person*) b).age);
 }

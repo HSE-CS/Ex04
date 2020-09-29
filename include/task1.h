@@ -4,10 +4,17 @@
 
 #ifndef TASK1_TASK1_H
 #define TASK1_TASK1_H
-bool comp1 (int a, int b);
-bool comp2 (double a, double b);
-bool comp3 (const char* a, const char* b);
-bool comp4 (const char* a, const char* b);
-bool comp5 (const char* a, const char* b);
-bool comp6 (const struct Person& a, const struct Person& b);
+#include <string>
+#include <string.h>
+struct Person
+{
+    std::string   name;
+    unsigned age;
+};
+int comp1 (const void* a, const void* b);
+int comp2 (const void* a, const void* b);
+int comp3 (const void* a, const void* b);
+int comp4 (const void* a, const void* b);
+int comp5 (const void* a, const void* b);
+int comp6 (const void* a, const void* b);
 #endif //TASK1_TASK1_H
