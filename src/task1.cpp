@@ -9,7 +9,17 @@ int comp1(const void* a, const void* b){
 
 int comp2(const void* a, const void* b){
     double eps = 1e-10;
-    return (abs(*(double*)a - *(double*)b) < eps ? 0 : (*(double*)a < *(double*)b ? -1 : 1));
+    if((abs(*(double*)a - *(double*)b) < eps){
+        return 0;
+    }
+    else{
+        if(abs(*(double*)a < *(double*)b){
+            return -1;
+        }
+        else{
+            return 1;
+        }
+    }
 }
 
 int comp3(const void* a, const void* b){
