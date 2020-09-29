@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
-#include <string>
+#include <string.h>
 
-double eps = 10e-10;
+double eps = 1e-10;
 
 struct Person {
     std::string name;
