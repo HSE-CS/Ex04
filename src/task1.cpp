@@ -1,4 +1,3 @@
-//#include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -12,31 +11,31 @@ typedef struct Person
 person;
 
 
-int comp1(const int a, const int b) {
-    return a - b;
+int comp1(const void* a, const void* b) {
+    return *(int*)a - *(int*)b;
 }
 
-int comp2(const double a, const double b) {
-    return int (a - b);
+int comp2(const void* a, const void* b) {
+    return int (*(double*)a - *(double *)b);
 }
 
-int comp3(const char* a, const char* b) {
-    for (int i = 0; (a + i) == nullptr || (b+ i) == nullptr; i++) {
-        if (*(a + i) == *(b + i)) {
+int comp3(const void* a, const void* b) {
+    for (int i = 0; ((char*)a + i) == nullptr || ((char*)b+ i) == nullptr; i++) {
+        if (*((char*)a + i) == *((char*)b + i)) {
             continue;
         }
-        return *a - *b;
+        return *(char*)a - *(char*)b;
     }
     return 0;
 }
 
-int comp4(const char* a, const char* b) {
-    return strlen(a) - strlen(b);
+int comp4(const void* a, const void* b) {
+    return strlen((char*)a) - strlen((char*)b);
 }
 
-int comp5(const char* a, const char* b) {
-    std::string str1(a);
-    std::string str2(b);
+int comp5(const void* a, const void* b) {
+    std::string str1((char*)a);
+    std::string str2((char*)b);
     return std::count(str1.begin(), str2.end(), ' ') - count(str2.begin(), str2.end(), ' ');
 }
 
