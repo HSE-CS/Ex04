@@ -4,8 +4,11 @@
 
 #include "task1.h"
 
+// #include <iostream>
+
 
 int main() {
+    // std::cout << comp3("uuu", "xxx");
 
     return 0;
 }

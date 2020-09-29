@@ -4,7 +4,11 @@
 
 
 // #include <bits/stdc++.h>
+#pragma once
+
 #include <cmath>
+#include <cstring>
+#include <string>
 
 #include "task1.h"
 
@@ -16,6 +20,12 @@ int comp1(const void *a, const void *b) {
 
 int comp2(const void *a, const void *b) {
     double x, y;
+
+//    double c = *(double *) x - *(double *) y;
+//    if (c == 0.) return 0;
+//    if (c > 0) return 1;
+//    if (c < 0) return -1;
+
     x = *(double *) a;
     y = *(double *) b;
     double eps = 1e-10;
@@ -25,21 +35,21 @@ int comp2(const void *a, const void *b) {
 }
 
 int comp3(const void *a, const void *b) {
-    return strcmp((char *) a, (char *) b);
+    return strcmp(*(char **) a, *(char **) b);
 }
 
 int comp4(const void *a, const void *b) {
-    return (int) (strlen((char *) a) - strlen((char *) b));
+    return (int) (strlen(*(char **) a) - strlen(*(char **) b));
 }
 
 int comp5(const void *a, const void *b) {
     // std::string x = reinterpret_cast<const char *>(*(char *) a);
 
-    string s = (const char *) a;
-    string t = (const char *) b;
+    string s = *(const char **) a;
+    string t = *(const char **) b;
     int cnts = 0, cntt = 0;
-    for (auto x: s) cnts += (x == ' ' ? 1 : 0);
-    for (auto x: t) cntt += (x == ' ' ? 1 : 0);
+    for (auto &x: s) cnts += (x == ' ' ? 1 : 0);
+    for (auto &x: t) cntt += (x == ' ' ? 1 : 0);
     return cnts - cntt;
 }
 
