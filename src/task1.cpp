@@ -18,7 +18,7 @@ int comp2( const void * a, const void * b ) {
 }
 
 int comp3( const void * a, const void * b ) {
-    return strcmp(*(const char**)a, *(const char**)b);
+    return ( strcmp(*(const char**)a, *(const char**)b));
 }
 
 int comp4( const void * a, const void * b ) {
@@ -26,8 +26,8 @@ int comp4( const void * a, const void * b ) {
 }
 
 int comp5( const void * a, const void * b ) {
-    string str1 = *(const char**)a;
-    string str2 = *(const char**)b;
+    std::string str1 = *(const char**)a;
+    std::string str2 = *(const char**)b;
     int c = 0;
     int d = 0;
     for (char ch1 : str1) {
