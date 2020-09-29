@@ -28,8 +28,8 @@ int comp4( const void * a, const void * b ) {
 int comp5( const void * a, const void * b ) {
     string str1 = *(const char**)a;
     string str2 = *(const char**)b;
-    unsigned int c = count(str1.begin(), str1.end(), ' ');
-    unsigned int d = count(str2.begin(), str2.end(), ' ');
+    int c = count(str1.begin(), str1.end(), ' ');
+    int d = count(str2.begin(), str2.end(), ' ');
     return ( *( int* )c - *( int* )d );
 }
 
