@@ -33,9 +33,9 @@ int comp5(const void* a, const void* b)
     std::string str_b = *(const char**)b;
 
 
-    int amount_a = count(str1.begin(), str1.end(), ' ');
+    int amount_a = count(str_a.begin(), str1.end(), ' ');
 
-    int amount_b = count(str2.begin(), str2.end(), ' ');
+    int amount_b = count(str_b.begin(), str2.end(), ' ');
 
     if (amount_a == amount_b) return 0;
     if (amount_a > amount_b) return 1;
