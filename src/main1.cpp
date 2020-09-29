@@ -5,7 +5,5 @@ using namespace std;
 
 int main()
 {
-    int arr[LARGE_SIZE];
-    int arr_copy[LARGE_SIZE];
     return 0;
 }
