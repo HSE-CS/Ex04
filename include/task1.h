@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string.h>
 
-double double_eps = 1e-10;
-
 struct Person {
     std::string name;
     unsigned age;

@@ -8,7 +8,8 @@ int comp1(const void* a, const void* b){
 }
 
 int comp2(const void* a, const void* b){
-    return (abs(*(double*)a - *(double*)b) < double_eps ? 0 : (*(double*)a < *(double*)b ? -1 : 1));
+    double eps = 1e-10;
+    return (abs(*(double*)a - *(double*)b) < eps ? 0 : (*(double*)a < *(double*)b ? -1 : 1));
 }
 
 int comp3(const void* a, const void* b){
