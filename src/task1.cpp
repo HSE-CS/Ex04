@@ -15,12 +15,12 @@ int comp2(const void* a, const void* b)//âåùåñòâåííîå ÷èñëî(ñ�
 	return (*(const double*)a - *(const double*)b) > 0.0 ? 1 : -1;
 }
 
-int comp3(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî äëèíå) - òèï const char*
+int comp4(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî äëèíå) - òèï const char*
 {
 	return (strlen(*(const char**)a) - strlen(*(const char**)b));
 }
 
-int comp4(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî çíà÷åíèþ) - òèï const char*
+int comp3(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî çíà÷åíèþ) - òèï const char*
 {
 	return strcmp((*(const char**)a), (*(const char**)b));
 }
