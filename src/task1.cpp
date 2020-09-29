@@ -30,7 +30,7 @@ int comp5( const void * a, const void * b ) {
     string str2 = *(const char**)b;
     int c = count(str1.begin(), str1.end(), ' ');
     int d = count(str2.begin(), str2.end(), ' ');
-    return ( *( int* )c - *( int* )d );
+    return ( c - d );
 }
 
 int comp6( const void * a, const void * b ) {
