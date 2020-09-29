@@ -27,12 +27,12 @@ int comp5(const void* a, const void* b)
 	int c2 = 0;
 	for (int i = 0; i < strlen(*(char**)a); i++)
 	{
-		if (*((char**)a)[i] == ' ')
+		if ((*(char**)a)[i] == ' ')
 			c1++;
 	}
 	for (int i = 0; i < strlen(*(char**)b); i++)
 	{
-		if (*((char**)b)[i] == ' ')
+		if ((*(char**)b)[i] == ' ')
 			c2++;
 	}
 	return c1 - c2;
