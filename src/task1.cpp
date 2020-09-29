@@ -28,7 +28,7 @@ int comp5(const void* a, const void* b) {
 			counta++;
 		}
 	}
-	for (int i = 0; i < strlen(*(const char**)a); i++) {
+	for (int i = 0; i < strlen(*(const char**)b); i++) {
 		if ((*(const char**)b)[i] == ' ') {
 			countb++;
 		}
