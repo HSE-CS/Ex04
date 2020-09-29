@@ -1,0 +1,8 @@
+# ninja log v5
+7	556	623076132	CMakeFiles/task1_lib.dir/src/task1.cpp.obj	5f29339aacb0024
+1	656	623076132	CMakeFiles/task1.dir/src/main1.cpp.obj	465bac5dde088e37
+650	725	623076132	task1_lib.lib	e77b477424f43506
+725	1478	623076133	task1.exe	c8261260a16f2365
+1	1058	623076281	CMakeFiles/task1_lib.dir/src/task1.cpp.obj	5f29339aacb0024
+1154	1225	623076281	task1_lib.lib	e77b477424f43506
+1225	1551	623076281	task1.exe	c8261260a16f2365
