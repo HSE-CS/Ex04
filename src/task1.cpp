@@ -34,5 +34,5 @@ int comp5(const void* a, const void* b){
 }
 
 int comp6(const void* a, const void* b) {
-    return ((*(struct Person*) a).age - (*(struct Person*) b).age);
+    return (int)((*(struct Person*) a).age - (*(struct Person*) b).age);
 }
