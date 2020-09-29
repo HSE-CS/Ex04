@@ -8,7 +8,11 @@ int comp1(const void * a, const void * b){
     return ( *( int* )a - *( int* )b );
 }
 int comp2(double a, double b){
-    return a - b;
+  //  return a - b;
+    if (a-b>0.0)
+        return 1;
+    else
+        return -1;
 }
 int comp3(const char* a, const char* b){
     return strcmp(a, b);
