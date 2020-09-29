@@ -1,7 +1,10 @@
-#include "task1.h"
 #include <iostream>
+#include <algorithm>
 #include <string>
 #include <cstring>
+#include "task1.h"
+
+using namespace std;
 
 int comp1(const void* a, const void* b) {
 

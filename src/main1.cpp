@@ -1,6 +1,7 @@
-#include "task1.h"
 #include <iostream>
-
+#include <string>
+#include <cstring>
+#include "task1.h"
 
 int main() {
 
