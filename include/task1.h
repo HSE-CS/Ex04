@@ -6,6 +6,7 @@
 #define TASK1_TASK1_H
 #include <string>
 #include <string.h>
+#include "math.h"
 struct Person
 {
     std::string   name;
