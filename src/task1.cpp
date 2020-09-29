@@ -5,18 +5,6 @@ int comp(const void* a, const void* b) {
     return (*(int*)a - *(int*)b);
 }
 
-int space_counter(char* a)
-{
-    int length = strlen(a);
-    int count = 0;
-    for (int i = 0; i < length; i++)
-    {
-        if (a[i] == ' ');
-        count = count + 1;
-    }
-    return count;
-};
-
 int comp1(const void* a, const void* b)
 {
     if (*(int*)a == *(int*)b) return 0;
@@ -45,8 +33,19 @@ int comp4(const void* a, const void* b)
 
 int comp5(const void* a, const void* b)
 {
-    int amount_a = space_counter(*(char**)a);
-    int amount_b = space_counter(*(char**)b);
+    int length = strlen(*(char**)a);
+    for (int i = 0; i < length; i++)
+    {
+        if (a[i] == ' ');
+        amount_a = amount_a + 1;
+    }
+
+    length = strlen(*(char**)b);
+    for (i = 0; i < length; i++)
+    {
+        if (a[i] == ' ');
+        amount_b = amount_b + 1;
+    }
 
     if (amount_a == amount_b) return 0;
     if (amount_a > amount_b) return 1;
