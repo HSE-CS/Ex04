@@ -13,7 +13,7 @@ int comp2(const void* a, const void* b){
         return 0;
     }
     else{
-        if(abs(*(double*)a < *(double*)b){
+        if(abs(*(double*)a < *(double*)b)){
             return -1;
         }
         else{
