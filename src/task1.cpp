@@ -33,12 +33,12 @@ int comp4(const void* a, const void* b) {
 int comp5(const void* a, const void* b) {
     int size1 = 0, size2 = 0;
     char* arr1 = *(char**)a;
-    for (int i = 0; i < strlen((char*)a); i++) {
+    for (int i = 0; i < strlen(arr1); i++) {
         if (arr1[i] == ' ')
             size1++;
     }
     arr1 = *(char**)b;
-    for (int i = 0; i < strlen((char*)b); i++) {
+    for (int i = 0; i < strlen(arr1); i++) {
         if (arr1[i] == ' ')
             size2++;
     }
