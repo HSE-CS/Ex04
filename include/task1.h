@@ -2,8 +2,7 @@
 #include <algorithm>
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
-#include <fstream>
+#include <cstring>
 using namespace std;
 
 struct Person
