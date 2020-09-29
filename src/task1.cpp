@@ -1,31 +1,30 @@
 #include "task1.h"
 #include <cstring>
-#include <string.h>
 #include <string>
 #include <iostream>
 using namespace std;
 
-int comp1(const void* a, const void* b)//öåëîå ÷èñëî(ñðàâíåíèå ïî çíà÷åíèþ) - òèï int
+int comp1(const void* a, const void* b)//Ã¶Ã¥Ã«Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®(Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã¯Ã® Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¾) - Ã²Ã¨Ã¯ int
 {
 	return (*(const int*)a - *(const int*)b);
 }
 
-int comp2(const void* a, const void* b)//âåùåñòâåííîå ÷èñëî(ñðàâíåíèå ïî çíà÷åíèþ) - òèï double
+int comp2(const void* a, const void* b)//Ã¢Ã¥Ã¹Ã¥Ã±Ã²Ã¢Ã¥Ã­Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®(Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã¯Ã® Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¾) - Ã²Ã¨Ã¯ double
 {
 	return (*(const double*)a - *(const double*)b) > 0.0 ? 1 : -1;
 }
 
-int comp3(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî äëèíå) - òèï const char*
+int comp3(const void* a, const void* b)//Ã±Ã²Ã°Ã®ÃªÃ (Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã¯Ã® Ã¤Ã«Ã¨Ã­Ã¥) - Ã²Ã¨Ã¯ const char*
 {
 	return (strlen(*(const char**)a) - strlen(*(const char**)b));
 }
 
-int comp4(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî çíà÷åíèþ) - òèï const char*
+int comp4(const void* a, const void* b)//Ã±Ã²Ã°Ã®ÃªÃ (Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã¯Ã® Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¾) - Ã²Ã¨Ã¯ const char*
 {
 	return strcmp((*(const char**)a), (*(const char**)b));
 }
 
-int comp5(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî êîëè÷åñòâó ïðîáåëîâ) - òèï const char*
+int comp5(const void* a, const void* b)//Ã±Ã²Ã°Ã®ÃªÃ (Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã¯Ã® ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã³ Ã¯Ã°Ã®Ã¡Ã¥Ã«Ã®Ã¢) - Ã²Ã¨Ã¯ const char*
 {
 	string str1 = *(const char**)a;
 	string str2 = *(const char**)b;
@@ -37,7 +36,7 @@ int comp5(const void* a, const void* b)//ñòðîêà(ñðàâíåíèå ïî êîëè÷åñòâó ïðîáåëîâ
 	return space1 - space2;
 }
 
-int comp6(const void* a, const void* b)//ñòðóêòóðà Person (ñðàâíåíèå ïî âîçðàñòó)
+int comp6(const void* a, const void* b)//Ã±Ã²Ã°Ã³ÃªÃ²Ã³Ã°Ã  Person (Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã¥ Ã¯Ã® Ã¢Ã®Ã§Ã°Ã Ã±Ã²Ã³)
 {
 	return (((const Person*)a)->age - ((const Person*)b)->age);
 }
