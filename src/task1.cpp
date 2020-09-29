@@ -1,4 +1,5 @@
 #include "task1.h"
+#include <string.h>
 
 int comp1(const void* a, const void* b)
 {
