@@ -1,6 +1,6 @@
 #ifndef COMPARE_H
 #define COMPARE_H
-#include <string>
+#include <string.h>
 using namespace std;
 
 struct Person
@@ -9,11 +9,11 @@ struct Person
     unsigned age;
 };
 
-int comp1(int one, int two);
-int comp2(double one, double two);
-int comp3(const char* one, const char* two);
-int comp4(const char* one, const char* two);
-int comp5(const char* one, const char* two);
-int comp6(Person one, Person two);
+int comp1(const void* one, const void* two);
+int comp2(const void* one, const void* two);
+int comp3(const void* one, const void* two);
+int comp4(const void* one, const void* two);
+int comp5(const void* one, const void* two);
+int comp6(const void* one, const void* two);
 
 #endif
