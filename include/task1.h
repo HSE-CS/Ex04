@@ -12,20 +12,20 @@ struct Person
 int comp1(const void * a, const void * b){
     return ( *( int* )a - *( int* )b );
 }
-int comp2(double *a, double *b){
+int comp2(const void*, const void*){
     //  return a - b;
-    if (*a-*b>0.0)
+    if (*(double*)a-*(double *)b>0.0)
         return 1;
     else
         return -1;
 }
-int comp3(const char* a, const char* b){
-    return strcmp(a, b);
+int comp3(const void*, const void*){
+    return strcmp(*(char**)a, *(char**)b);
 }
-int comp4(const char* a, const char* b){
-    return strlen(a) - strlen(b);
+int comp4(const void*, const void*){
+    return strlen(*(char**)a) - strlen(*(char**)b);
 }
-int comp5(const char* a, const char* b){
+int comp5(const void*, const void*){
     string str1(a);
     string str2(b);
     return count(str1.begin(), str1.end(), ' ') - count(str2.begin(), str2.end(), ' ') ;
