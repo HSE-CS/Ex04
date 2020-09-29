@@ -38,6 +38,7 @@ int comp5(const void* str1, const void* str2)
 	{
 		if (str_1[i] == ' ') k1++;
 		if (str_1[i] == ' ') k2++;
+		i++;
 	}
 	return k1-k2;
 
