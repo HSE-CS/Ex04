@@ -9,7 +9,10 @@ int comp1(const void* a, const void* b) {
 }
 
 int comp2(const void* a, const void* b) {
-	return (*(double*)a - *(double*)b);
+	if (*(double*)a - *(double*)b > 0)
+		return 1;
+	else
+		return 0;
 }
 
 int comp3(const void* a, const void* b) {
