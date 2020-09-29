@@ -29,6 +29,7 @@ int comp4(const void* a, const void* b)
 int comp5(const void* a, const void* b)
 {
     std::string str_a = *(const char**)a;
+
     std::string str_b = *(const char**)b;
     int length = strlen(str_a);
     for (int i = 0; i < length; i++)
