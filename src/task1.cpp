@@ -27,5 +27,7 @@ int comp5( const void* a, const void* b )
 
 int comp6( const void* a, const void* b )
 {
-    return 0;
+    struct Person person_a = (*(Person *) a);
+    struct Person person_b = (*(Person *) b);
+    return (person_a.age - person_b.age);
 }
