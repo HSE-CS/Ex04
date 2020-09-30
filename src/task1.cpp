@@ -3,20 +3,12 @@
 
 #include "task1.h"
 
-int q(char *str, char c){
-    int counter = 0;
-    for (int i = 0; i < strlen(str); ++i)
-        if (str[i] == c)
-            ++counter;
-    return counter;
-}
-
 int comp1( const void* a, const void* b ) {
     return ( *( int* )a - *( int* )b );
 }
 
 int comp2( const void* a, const void* b ) {
-    return ( *( double* )a - *( double* )b );
+    return (int)( *( double* )a - *( double* )b );
 }
 
 int comp3( const void* a, const void* b ){
