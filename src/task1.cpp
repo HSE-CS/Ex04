@@ -12,7 +12,10 @@ int comp1(const void* a, const void* b) {
 }
 
 int comp2(const void* a, const void* b) {
-	return (*(double*)a - *(double*)b);
+	double eps = 1e-5;
+	if (fabs(*(double*)a - *(double*)b) < eps) return 0;
+	else if (*(double*)a - *(double*)b > eps) return 1;
+	else return -1;
 }
 
 int comp3(const void* a, const void* b) {
@@ -24,13 +27,13 @@ int comp4(const void* a, const void* b) {
 }
 
 int comp5(const void* a, const void* b) {
-	int h = { 0 };
-	int k = { 0 };
-	const char* s1 = (const char*)a;
-	const char* s2 = (const char*)b;
-	for (int i = 0; i < strlen((const char*)a); i++) if (s1[i] == ' ') h++;
-	for (int i = 0; i < strlen((const char*)b); i++) if (s2[i] == ' ') k++;
-	return (h - k);
+	string s1(*(char**)a);
+	string s2(*(char**)b);
+	auto cs1 = count(s1.begin(), s1.end(), ' ');
+	auto cs2 = count(s2.begin(), s2.end(), ' ');
+	if (cs1 > cs2) return 1;
+	else if (cs1 == cs2) return 0;
+	else return -1;
 }
 
 int comp6(const void* a, const void* b) {
