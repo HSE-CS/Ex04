@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <cstdlib>
+#include <string.h>
 #include "task1.h"
 
 struct Person
@@ -21,18 +22,10 @@ int comp3( const void* a, const void* b ) {
 }
 
 int comp4( const void* a, const void* b ) {
-	char s[255]=*( const char* )a;
-	char s2[255]=*( const char* )b;
-	int i=0;
-	while s[i]!='\0'{
-		i++;
-	}
-	int len1=i;
-	i=0;
-	while s2[i]!='\0'{
-		i++;
-	}
-	int len2=i;
+	string s=*( const char* )a;
+	string s2=*( const char* )b;
+	int len=strlen(s);
+	int len2=strlen(s2);
 	if (len1==len2)
 		return 0;
 	else
@@ -43,8 +36,8 @@ int comp4( const void* a, const void* b ) {
 }
 
 int comp5( const void* a, const void* b ) {
-	char s[255]=*( const char* )a;
-	char s2[255]=*( const char* )b;
+	string s=*( const char* )a;
+	string s2=*( const char* )b;
 	int i=0;
 	while s[i]!='\0'{
 		if (s[i]==' ') i++;
