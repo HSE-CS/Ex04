@@ -2,6 +2,7 @@
 // Created by freeb on 05.10.2020.
 //
 
+#include <cmath>
 #include "task1.h"
 
 int comp1( const void* a, const void* b ) {
@@ -9,6 +10,10 @@ int comp1( const void* a, const void* b ) {
 }
 
 int comp2( const void* a, const void* b ) {
+    double eps = 1e-5;
+    if (fabs( *( double * )a - *( double * )b ) < eps) {
+        return 0;
+    }
     return (int)( *( double * )a - *( double * )b );
 }
 
