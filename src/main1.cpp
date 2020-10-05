@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <cstdlib>
+#include <string.h>
 #include "task1.h"
 
 using namespace std;

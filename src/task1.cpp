@@ -2,13 +2,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <string.h>
+
 #include "task1.h"
 
-struct Person
-{
-    string   name;
-    unsigned age;
-}
+
 
 int comp1( const void* a, const void* b ) {
     return ( *( int* )a - *( int* )b );
@@ -18,7 +15,7 @@ int comp2( const void* a, const void* b ) {
     return ( *( double* )a - *( double* )b );
 }
 int comp3( const void* a, const void* b ) {
-    return ( *( const char* )a - *( const char* )b );
+    return ( *( char* )a - *( char* )b );
 }
 
 int comp4( const void* a, const void* b ) {
