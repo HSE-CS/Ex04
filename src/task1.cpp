@@ -23,7 +23,21 @@ int comp2(const void* a, const void* b) {
 
 
 int comp3(const void* a, const void* b) {
-	return (strcmp((const char*)a, (const char*)b));
+	switch (strcmp((const char*)a, (const char*)b)){
+	case 0: {
+		return 0;
+		break;
+	}
+	case 1: {
+		return 1;
+		break;
+	}
+	case -1:
+		return -1;
+		break;
+	}
+	
+	/*return (strcmp((const char*)a, (const char*)b));*/
 }
 
 
