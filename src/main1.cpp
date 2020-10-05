@@ -4,17 +4,19 @@
 #include <cstdlib>
 #include <ctime>
 #include "task1.h"
-
+#include <string>
 
 using namespace std;
 
 
 int main()
 {
-    int j = 0;
-    int* arr = (int*)malloc(sizeof(int) * LARGE_SIZE);
-    srand(time(nullptr));
-    generate(arr, arr + LARGE_SIZE, rnd());
-    qsort(arr, LARGE_SIZE, sizeof(int), comp1);
-    return 0;
+	const size_t n = 6;
+	const char* arr[n]{ "nnn", "uuu", "kkk", "ppp", "sss", "ttt" };
+	qsort(arr, n, sizeof(const char*), comp3);
+	const char* expected[n]{ "kkk", "nnn", "ppp", "sss", "ttt", "uuu" };
+
+	for (size_t i = 0; i < n; i++)
+		if (!strcmp(expected[i], arr[i]))
+			printf("%s\n", expected[i]);
 }

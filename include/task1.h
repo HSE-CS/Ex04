@@ -6,16 +6,22 @@
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 
 const size_t LARGE_SIZE = 1000000;
 
 int comp1(const void* a, const void* b);
+int comp2(const void* a, const void* b);
+int comp3(const void* a, const void* b);
+int comp4(const void* a, const void* b);
+int comp5(const void* a, const void* b);
+int comp6(const void* a, const void* b);
 
 struct Person
 {
     string name;
     unsigned age;
-}
+};
 
 
 struct rnd
