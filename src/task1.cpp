@@ -13,8 +13,11 @@ int comp2( const void* a, const void* b ) {
     double eps = 1e-5;
     if (fabs( *( double * )a - *( double * )b ) < eps) {
         return 0;
+    } else if ( *( double * )a - *( double * )b > eps){
+        return 1;
+    } else {
+        return -1;
     }
-    return (int)( *( double * )a - *( double * )b );
 }
 
 int comp3( const void* a, const void* b ) {
