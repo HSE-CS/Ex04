@@ -1,3 +1,4 @@
+#include <cmath>
 #include "task1.h"
 
 int comp1(const void* a, const void* b) {
@@ -5,7 +6,16 @@ int comp1(const void* a, const void* b) {
 }
 
 int comp2(const void* a, const void* b) {
-    return (int)(*(double*)a - *(double*)b);
+    double eps = 1e-5;
+    if (fabs(*(double*)a - *(double*)b) < eps) {
+        return 0;
+    }
+    else if (*(double*)a - *(double*)b > eps) {
+        return 1;
+    }
+    else {
+        return -1;
+    }
 }
 
 int comp3(const void* a, const void* b) {
@@ -13,12 +23,12 @@ int comp3(const void* a, const void* b) {
 }
 
 int comp4(const void* a, const void* b) {
-    return (int)(strlen(*(const char**)a) - strlen(*(const char**)b));
+    return (int)(strlen(*(char**)a) - strlen(*(char**)b));
 }
 
 int comp5(const void* a, const void* b) {
-    return (int)(count(*(const char**)a, *(const char**)a + strlen(*(const char**)a), ' ') -
-        count(*(const char**)b, *(const char**)b + strlen(*(const char**)b), ' '));
+    return (int)(count(*(char**)a, *(char**)a + strlen(*(char**)a), ' ') -
+        count(*(char**)b, *(char**)b + strlen(*(char**)b), ' '));
 }
 
 int comp6(const void* a, const void* b) {
