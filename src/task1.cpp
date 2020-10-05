@@ -1,24 +1,39 @@
-int main(int argc, _TCHAR* argv[])
-{
-    ofstream fout("f_in.bin", ios_base::out | ios_base::binary);
-    int n;
-    cout << "Enter the number of people: " << endl;
-    cin >> n;
-    vector<Phonenote> arr(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i].surname >> arr[i].name >> arr[i].phoneNumber;
-        for (int j = 0; j < 3; j++)
-        {
-            cin >> arr[i].birthday[j];
-        }
-    }
-    sort(arr.begin(), arr.end(), comparator);
+#include "task1.h"
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-        fout.write((char*)&arr[i], sizeof arr[i]);
-    }
-    system("pause");
-    return 0;
+int comp1(const void* a, const void* b) {
+	return (*(int*)a - *(int*)b) == 0 ? 0 : ((*(int*)a - *(int*)b) > 0 ? 1 : -1);
+}
+int comp2(const void* a, const void* b) {
+	if (*(double*)a - *(double*)b > 0.0)
+		return 1;
+	else if (*(double*)a - *(double*)b < 0.0)
+		return -1;
+	else if ((*(double*)a - *(double*)b < 0.000001) || (*(double*)a - *(double*)b > -0.000001))
+		return 0;
+}
+int comp3(const void* a, const void* b) {
+	return (strcmp(*((char**)a), *((char**)b)));
+}
+int comp4(const void* a, const void* b) {
+	int i = strlen(*((char**)a)) - strlen(*((char**)b));
+	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
+}
+int comp5(const void* a, const void* b) {
+	unsigned int n = 0, m = 0;
+	for (unsigned int i = 0; i < strlen(*((char**)a)); i++)
+	{
+		if ((*((char**)a))[i] == ' ')
+			n++;
+	}
+	for (unsigned int i = 0; i < strlen(*((char**)b)); i++)
+	{
+		if ((*((char**)b))[i] == ' ')
+			m++;
+	}
+	int i = n - m;
+	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
+}
+int comp6(const void* a, const void* b) {
+	int i = ((Person*)a)->age - ((Person*)b)->age;
+	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
 }
