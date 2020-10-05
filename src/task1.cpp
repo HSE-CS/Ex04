@@ -1,6 +1,6 @@
 #include "task1.h"
 #include <cstring>
-#include <iosеream>
+#include <iostream>
 
 int comp1(void* a, void* b) {
 	return ( *((int*)a - *((int*)b);
