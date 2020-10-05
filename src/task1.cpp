@@ -7,7 +7,7 @@ int comp1(void* a, void* b) {
 }
 
 int comp2(void* a, void* b) {
-	return (int)(*((double*)a) - *((double*)b));
+	return ((int)(*((double*)a)) - (int)(*((double*)b)));
 }
 
 int comp3(void* a, void* b) {
