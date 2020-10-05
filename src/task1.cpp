@@ -1,13 +1,13 @@
 #include "task1.h"
 #include <cstring>
-#include <iosream>
+#include <iosеream>
 
 int comp1(void* a, void* b) {
 	return ( *((int*)a - *((int*)b);
 }
 
 int comp2(void* a, void* b) {
-	return ( *((double*)a - *((double*)b);
+	return (int)(*((double*)a) - *((double*)b));
 }
 
 int comp3(void* a, void* b) {
