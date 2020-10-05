@@ -35,7 +35,7 @@ int comp3(const void* a, const void* b)
     const char* twor = *two;
     int bx = strlen((twor));
     int sum2 = 0;
-    for (int i = 0; i < ax; i++)
+    for (int i = 0; i < bx; i++)
         sum2 += twor[i];
     int c = sum1 - sum2;
     return c;
@@ -69,7 +69,7 @@ int comp5(const void* a, const void* b)
     const char** two = (const char**)b;
     const char* twor = *two;
     int bx = strlen((twor));
-    for (int i = 0; i < ax; i++)
+    for (int i = 0; i < bx; i++)
         if (twor[i] == ' ')
             sum2++;
     int c = sum1 - sum2;
