@@ -9,3 +9,4 @@
 using namespace std;
 
 int comp1(const void* a, const void* b);
+int comp2(const void* a, const void* b);
