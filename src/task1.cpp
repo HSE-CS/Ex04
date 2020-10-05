@@ -17,7 +17,7 @@ int comp2(const void* a, const void* b) {
 }
 
 int comp3(const void* s1, const void* s2) {
-	return strcmp(*(char**)s1, *(char**)s2);
+	return strcmp(*((char**)s1), *((char**)s2));
 	/*
 	while ((*(char**)s1)[i] != '\0' && s2[i] != '\0') {
 		if (s1[i] < s2[i]) {
@@ -32,7 +32,7 @@ int comp3(const void* s1, const void* s2) {
 }
 
 int comp4(const void* s1, const void* s2) {
-	return strlen(*(char**)s1) - strlen(*(char**)s2);
+	return strlen(*((char**)s1)) - strlen(*((char**)s2));
 	/*
 	int i = 0, len1 = 0, len2 = 0;
 	char* s1 = (char*)s1_n;
@@ -59,13 +59,13 @@ int comp4(const void* s1, const void* s2) {
 
 int comp5(const void* s1, const void* s2) {
 	int i = 0, len1 = 0, len2 = 0;
-	while ((*(char**)s1)[i] != '\0') {
-		if ((*(char**)s1)[i] == ' ') {
+	while ((*((char**)s1))[i] != '\0') {
+		if ((*((char**)s1))[i] == ' ') {
 			len1++;
 		}
 	}
-	while ((*(char**)s2)[i] != '\0') {
-		if ((*(char**)s2)[i] == ' ') {
+	while ((*((char**)s2))[i] != '\0') {
+		if ((*((char**)s2))[i] == ' ') {
 			len2++;
 		}
 	}
