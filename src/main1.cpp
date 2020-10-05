@@ -6,10 +6,7 @@ int main()
 	double arr[n]{4.0, 3.0, 2.4, 2.5, 2.1, -1};
 	double expected[n]{-1, 2.1, 2.4, 2.5, 3.0, 4.0};
         qsort(arr,n,sizeof(double),comp2);
-        for(int i =0; i < 6; i++)
-        {
-        	std::cout << arr[i] << "\n";
-        }
+
 	
 	
 	
