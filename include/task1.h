@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include <string.h>
+#include <string>
 
 struct Person {
 	std::string name;

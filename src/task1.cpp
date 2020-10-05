@@ -1,6 +1,8 @@
 #include "task1.h"
 #include <cstring>
 #include <iostream>
+#include <string.h>
+#include <string>
 
 int comp1(void* a, void* b) {
 	return (*(int*)a - *(int*)b);
@@ -19,7 +21,7 @@ int comp2(void* a, void* b) {
 }
 
 int comp3(void* a, void* b) {
-	return strcmp((const char*)a, (const char*)b);
+	return (strcmp(*((char**)a), *((char**)b)));
 }
 
 int comp4(void* a, void* b) {
