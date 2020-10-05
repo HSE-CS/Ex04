@@ -1,20 +1,15 @@
 #include "task1.h"
 
 int comp1(const void* a, const void* b) {
-	if ((*(int*)a - *(int*)b) > 0)
-		return 0;
-	if ((*(int*)a - *(int*)b) < 0)
-		return -1;
-	if ((*(int*)a - *(int*)b) == 0)
-		return 0;
+	return (*(int*)a - *(int*)b) == 0 ? 0 : ((*(int*)a - *(int*)b) > 0 ? 1 : -1);
 }
 
 int comp2(const void* a, const void* b) {
-	if ((*(double*)a - *(double*)b) > 0)
-		return 0;
-	if ((*(double*)a - *(double*)b) < 0)
+	if (*(double*)a - *(double*)b > 0.0)
+		return 1;
+	else if (*(double*)a - *(double*)b < 0.0)
 		return -1;
-	if ((*(double*)a - *(double*)b) == 0)
+	else if ((*(double*)a - *(double*)b < 0.000001) || (*(double*)a - *(double*)b > -0.000001))
 		return 0;
 }
 
@@ -22,8 +17,7 @@ int comp3(const void* a, const void* b) {
 	return (strcmp(*((char**)a), *((char**)b)));
 }
 
-
-int comp4(const void* a, const void* b) {
+int comp4(const void* a, const void* b){
 	int i = strlen(*((char**)a)) - strlen(*((char**)b));
 	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
 }
