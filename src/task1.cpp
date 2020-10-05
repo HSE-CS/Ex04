@@ -30,7 +30,7 @@ int comp5(const void* a, const void* b) {
 	const char* s2 = (const char*)b;
 	for (int i = 0; i < strlen((const char*)a); i++) if (s1[i] == ' ') h++;
 	for (int i = 0; i < strlen((const char*)b); i++) if (s2[i] == ' ') k++;
-	return (h - k);;
+	return (h - k);
 }
 
 int comp6(const void* a, const void* b) {

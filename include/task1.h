@@ -1,10 +1,14 @@
-#define TASK
-#ifndef TASK
+#ifndef task1_hpp
+#define task1_hpp
+#include <stdio.h>
+#include <cstring>
+#include <string>
+using namespace std;
 
 struct Person{
-	char* name;
+	string name;
 	unsigned age;
-}Person;
+};
 
 int comp1(const void* a, const void* b);
 
