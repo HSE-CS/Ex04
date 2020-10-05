@@ -24,34 +24,25 @@ int comp2(const void* a, const void* b) {
 
 int comp3(const void* a, const void* b) {
 	
-	if ((const char*)a > (const char*)b) {
-		return 1;
-	}
-	else if ((const char*)a < (const char*)b) {
-		return -1;
-	}
-	else {
-		return 0;
-	}
-	/*return (strcmp((const char*)a, (const char*)b));*/
+	return strcmp(*((char**)a), *((char**)b));
 }
 
 
 int comp4(const void* a, const void* b) {
-	return (strlen((const char*)a) - strlen((const char*)b));
+	return (strlen((*(char**)a) - strlen((*(char**)a))));
 }
 
 
 int comp5(const void* a, const void* b) {
 	int aSpace = 0, bSpace = 0;
-	const char* aPtr = (const char*)a;
-	const char* bPtr = (const char*)b;
-	for (int i = 0; i < strlen((const char*)a); i++) {
+	char* aPtr = ((*((char**)a)));
+	char* bPtr = ((*((char**)b)));
+	for (int i = 0; i < strlen((*((char**)a))); i++) {
 		if (aPtr[i] == ' ') {
 			aSpace++;
 		}
 	}
-	for (int i = 0; i < strlen((const char*)b); i++) {
+	for (int i = 0; i < strlen(*((char**)b)); i++) {
 		if (bPtr[i] == ' ') {
 			bSpace++;
 		}
