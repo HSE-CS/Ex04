@@ -10,6 +10,7 @@
 #include <cstring>
 #include <string.h>
 #include <iterator>
+using namespace std;
 
 const size_t LARGE_SIZE = 1000000;
 
