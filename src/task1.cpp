@@ -32,8 +32,11 @@ int comp4(const void *a, const void *b)
 }
 
 int comp5(const void *a, const void *b) {
-    const auto count_in_a = count(*(char **) a, (char *) a + strlen(*(char **) a), ' ');
-    const auto count_in_b = count(*(char **) b, (char *) b + strlen(*(char **) b), ' ');
+    string a_to_string(*(char**)a);
+    string b_to_string(*(char**)b);
+    auto count_in_a = count(a_to_string.begin(), a_to_string.end(), ' ');
+    auto count_in_b = count(b_to_string.begin(), b_to_string.end(), ' ');
+
     if (count_in_a > count_in_b)
     {
         return 1;
