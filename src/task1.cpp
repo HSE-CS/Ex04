@@ -6,9 +6,11 @@
 //  Copyright © 2020 Алексей Трутнев. All rights reserved.
 //
 
-#include "task1.h"
+#include "task1.hpp"
 #include <cstring>
 #include <string.h>
+#include <cmath>
+#include <math.h>
 
 
 int comp1( const void* a, const void* b ) {
@@ -22,22 +24,22 @@ int comp2(const void *a, const void *b) {
     else return -1;
 }
 
-int comp3(const void * a, const void * b){
-    return strcmp((const char *)a, (const char *)b);
+int comp3(const void *a, const void *b) {
+    return strcmp(*(char **) a, *(char **) b);
 }
 
-int comp4(const void * a, const void * b){
-    return (int)(strlen((const char* )a) - strlen((const char* )b));
+int comp4(const void *a, const void *b) {
+    return (int)(strlen(*(char **) a) - strlen(*(char **) b));
 }
 
-int comp5(const void * a, const void * b){
-    int h = {0};
-    int k = {0};
-    const char* s1 = (const char* )a;
-    const char* s2 = (const char* )b;
-    for (int i = 0; i < strlen((const char* )a); i++)   if (s1[i] == ' ') h++;
-    for (int i = 0; i < strlen((const char* )b); i++)   if (s2[i] == ' ') k++;
-    return (h - k);
+int comp5(const void *a, const void *b) {
+    string s1(*(char**)a);
+    string s2(*(char**)b);
+    auto cs1 = count(s1.begin(), s1.end(), ' ');
+    auto cs2 = count(s2.begin(), s2.end(), ' ');
+    if (cs1 > cs2) return 1;
+    else if (cs1 == cs2) return 0;
+    else return -1;
 }
 
 int comp6(const void *a, const void *b) {
