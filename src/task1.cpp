@@ -23,20 +23,16 @@ int comp2(const void* a, const void* b) {
 
 
 int comp3(const void* a, const void* b) {
-	switch (strcmp((const char*)a, (const char*)b)){
-	case 0: {
-		return 0;
-		break;
-	}
-	case 1: {
-		return 1;
-		break;
-	}
-	case -1:
-		return -1;
-		break;
-	}
 	
+	if ((const char*)a > (const char*)b) {
+		return 1;
+	}
+	else if ((const char*)a < (const char*)b) {
+		return -1;
+	}
+	else {
+		return 0;
+	}
 	/*return (strcmp((const char*)a, (const char*)b));*/
 }
 
