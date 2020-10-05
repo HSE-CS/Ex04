@@ -1,9 +1,8 @@
 #include "task1.h"
-#include <algorithm>
-#include <string>
 #include <iostream>
-#include <time.h>
-#include <string.h>
+#include <cstdlib>
+#include <string>
+#include <cstring>
 
 
 int main() {
