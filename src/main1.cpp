@@ -13,14 +13,12 @@ int main() {
     //     cout<<arr1[i]<<" ";
     // cout<<endl;
 
-    const size_t n = 6;
-	double arr[n]{4.0, 3.0, 2.4, 2.5, 2.1, -1};
-	double expected[n]{-1, 2.1, 2.4, 2.5, 3.0, 4.0};
-    qsort(arr,n,sizeof(double),comp2);
-    for(int i = 0; i < n; i++)
-        cout<<arr[i]<<" ";
-    cout<<endl;
-
+    // double arr2[] = {1.1, 6.6, 5.5, 2.2, 3.3, 9.9, 4.4, 7.7, 8.8005553535};
+    // int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    // qsort((void*)arr2, size2, sizeof(arr2[0]), comp2);
+    // for(int i = 0; i < size2; i++)
+    //     cout<<arr2[i]<<" ";
+    // cout<<endl;
 
     // const char *arr3[4] = { "Blue", "Red", "Orange", "Yellow" };
     // int size3 = sizeof(arr3) / sizeof(arr3[0]);
@@ -46,5 +44,5 @@ int main() {
     // const size_t n = 3;
 	// Person arr[n]{{"a",34},{"b",48},{"c",22}};
 	// qsort(arr,n,sizeof(Person),comp6);
-    return 0;
+    // return 0;
 }
