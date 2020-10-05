@@ -6,6 +6,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <cstring>
+#include <string.h>
+#include <cmath>
+#include <math.h>
+#include <algorithm>
+#include <iostream>
 
 int comp1(const void* a, const void* b) {
 	return (*(int*)a - *(int*)b);
