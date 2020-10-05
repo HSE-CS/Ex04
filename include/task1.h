@@ -1,4 +1,4 @@
-#ifndef TASK1.H
+//#ifndef TASK1.H
 //#define TASK1.H
 #include <string>
 using namespace std;
@@ -14,4 +14,4 @@ int comp4(const void* s1_n, const void* s2_n);
 int comp5(const void* s1_n, const void* s2_n);
 int comp6(const void* p1_n, const void* p2_n);
 
-#endif
+//#endif
