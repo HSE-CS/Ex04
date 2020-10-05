@@ -8,54 +8,54 @@
 
 #include "task1.hpp"
 
-int comp1(int* a, int* b)
+int comp1(const void* a, const void* b)
 {
-    int c = *a - *b;
+    int c = *(int*)a - *(int*)b;
     return c;
 }
 
-int comp2(double* a, double* b)
+int comp2(const void* a, const void* b)
 {
-    if (* a == *b)
+    if (* (double*)a == *(double*)b)
         return 0;
-    int c = round(*a - *b);
+    int c = round(*(double*)a - *(double*)b);
     return c;
 }
 
-int comp3(const char** a, const char** b)
+int comp3(const void** a, const void** b)
 {
-    int arr_a, arr_b;
-    for (int i{ 0 }; i < strlen(*a); i++)
+    int arr_a = 0, arr_b = 0;
+    for (int i{ 0 }; i < strlen(*(const char**)a); i++)
     {
-        arr_a = (*a)[i];
-        arr_b = (*b)[i];
+        arr_a = (*(const char**)a)[i];
+        arr_b = (*(const char**)b)[i];
     }
     return arr_a-arr_b;
 }
 
-int comp4(const char** a, const char** b)
+int comp4(const void** a, const void** b)
 {
-    int c = strlen(*a) - strlen(*b);
+    int c = strlen(*(const char**)a) - strlen(*(const char**)b);
     return c;
 }
 
-int comp5(const char** a, const char** b)
+int comp5(const void** a, const void** b)
 {
     int c_a = 0, c_b = 0;
-    for (int i = 0; i < strlen(*a); i++)
+    for (int i = 0; i < strlen(*(const char**)a); i++)
     {
-        if ((*a)[i] == ' ')
+        if ((*(const char**)a)[i] == ' ')
             c_a++;
     }
-    for (int i = 0; i < strlen(*b); i++)
+    for (int i = 0; i < strlen(*(const char**)b); i++)
     {
-        if ((*b)[i] == ' ')
+        if ((*(const char**)b)[i] == ' ')
             c_b++;
     }
     return c_a-c_b;
 }
 
-int comp6(Person* a, Person* b)
+int comp6(const void* a, const void* b)
 {
-    return a->age - b->age;
+    return (int)((Person*)a)->age - (int)((Person*)b)->age;
 }
