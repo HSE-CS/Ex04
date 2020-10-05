@@ -5,14 +5,21 @@ int comp1(const void* a, const void* b) {
 }
 
 int comp2(const void* a, const void* b) {
-	return (*(double*)a - *(double*)b);
+	if (*(double*)a - *(double*)b < 0.0000) {
+		return -1;
+	}
+	else if (*(double*)a - *(double*)b > 0.0000) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
 
-int comp3(const void* s1_n, const void* s2_n) {
-	int i = 0;
-	char* s1 = (char*)s1_n;
-	char* s2 = (char*)s2_n;
-	while (s1[i] != '\0' && s2[i] != '\0') {
+int comp3(const void* s1, const void* s2) {
+	return strcmp(*(char**)s1, *(char**)s2);
+	/*
+	while ((*(char**)s1)[i] != '\0' && s2[i] != '\0') {
 		if (s1[i] < s2[i]) {
 			return -1;
 		}
@@ -21,9 +28,12 @@ int comp3(const void* s1_n, const void* s2_n) {
 		}
 	}
 	return 0;
+	*/
 }
 
-int comp4(const void* s1_n, const void* s2_n) {
+int comp4(const void* s1, const void* s2) {
+	return strlen(*(char**)s1) - strlen(*(char**)s2);
+	/*
 	int i = 0, len1 = 0, len2 = 0;
 	char* s1 = (char*)s1_n;
 	char* s2 = (char*)s2_n;
@@ -44,47 +54,24 @@ int comp4(const void* s1_n, const void* s2_n) {
 	}
 
 	return 0;
+	*/
 }
 
-int comp5(const void* s1_n, const void* s2_n) {
+int comp5(const void* s1, const void* s2) {
 	int i = 0, len1 = 0, len2 = 0;
-	char* s1 = (char*)s1_n;
-	char* s2 = (char*)s2_n;
-	while (s1[i] != '\0') {
-		if (s1[i] == ' ') {
+	while ((*(char**)s1)[i] != '\0') {
+		if ((*(char**)s1)[i] == ' ') {
 			len1++;
 		}
 	}
-	while (s2[i] != '\0') {
-		if (s2[i] == ' ') {
+	while ((*(char**)s2)[i] != '\0') {
+		if ((*(char**)s2)[i] == ' ') {
 			len2++;
 		}
 	}
-	if (len1 < len2) {
-		return -1;
-	}
-	else if (len1 > len2) {
-		return 1;
-	}
-	else {
-		return 0;
-	}
-
-	return 0;
+	return len1 - len2;
 }
 
-int comp6(const void* p1_n, const void* p2_n) {
-	Person p1 = *(Person*)p1_n;
-	Person p2 = *(Person*)p2_n;
-	if (p1.age < p2.age) {
-		return -1;
-	}
-	else if (p1.age > p2.age) {
-		return 1;
-	}
-	else {
-		return 0;
-	}
-
-	return 0;
+int comp6(const void* p1, const void* p2) {
+	return ((Person*)p1)->age - ((Person*)p2)->age;
 }
