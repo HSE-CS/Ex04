@@ -3,11 +3,11 @@
 #include <iostream>
 
 int comp1(void* a, void* b) {
-	return (*((int*)a) - *((int*)b));
+	return (*(int*)a - *(int*)b);
 }
 
 int comp2(void* a, void* b) {
-	return ((int)(*((double*)a)) - (int)(*((double*)b)));
+	return (int)((*(double*)a) - (*(double*)b));
 }
 
 int comp3(void* a, void* b) {
@@ -35,6 +35,6 @@ int comp5(void* a, void* b) {
 }
 
 int comp6(void* a, void* b) {
-	return ((int)(((Person*)a)->age) - (int)(((Person*)b)->age));
+	return (int)( (((Person*)a)->age) - (((Person*)b)->age) );
 }
 
