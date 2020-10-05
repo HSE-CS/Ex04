@@ -13,7 +13,7 @@ int comp2(const void* a, const void* b) {
 		return 0;
 };
 
-int comp3(const void a, const void b) {
+int comp3(const void* a, const void* b) {
 	return (strcmp(*((char**)a), *((char**)b)));
 };
 
@@ -33,7 +33,7 @@ int comp5(const void* a, const void* b) {
 		if ((*((char**)b))[i] == ' ')
 			m++;
 	}
-	return (n - m);
+	return (n + m);
 };
 
 int comp6(const void* a, const void* b) {
