@@ -1,7 +1,5 @@
 #include "task1.h"
 
-#include "task1.h"
-
 int comp1(const void* a, const void* b)
 {
 	if (*(int*)a < *(int*)b)
