@@ -1,6 +1,9 @@
 //#ifndef TASK1.H
 //#define TASK1.H
+#include <iostream>
+#include <cstdlib>
 #include <string>
+#include <cstring>
 using namespace std;
 
 struct Person {
