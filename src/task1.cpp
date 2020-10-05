@@ -1,39 +1,63 @@
 #include "task1.h"
 
-int comp1(const void* a, const void* b) {
-	return (*(int*)a - *(int*)b) == 0 ? 0 : ((*(int*)a - *(int*)b) > 0 ? 1 : -1);
-}
-int comp2(const void* a, const void* b) {
-	if (*(double*)a - *(double*)b > 0.0)
-		return 1;
-	else if (*(double*)a - *(double*)b < 0.0)
+#include "task1.h"
+
+int comp1(const void* a, const void* b)
+{
+	if (*(int*)a < *(int*)b)
 		return -1;
-	else if ((*(double*)a - *(double*)b < 0.000001) || (*(double*)a - *(double*)b > -0.000001))
+	if (*(int*)a == *(int*)b)
 		return 0;
+	if (*(int*)a > * (int*)b)
+		return 1;
 }
-int comp3(const void* a, const void* b) {
-	return (strcmp(*((char**)a), *((char**)b)));
+
+int comp2(const void* a, const void* b)
+{
+	if (*(double*)a < *(double*)b)
+		return -1;
+	if (*(double*)a == *(double*)b)
+		return 0;
+	if (*(double*)a > * (double*)b)
+		return 1;
 }
-int comp4(const void* a, const void* b) {
-	int i = strlen(*((char**)a)) - strlen(*((char**)b));
-	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
+
+int comp3(const void* a, const void* b)
+{
+	return strcmp(*(char**)a, *(char**)b);
 }
-int comp5(const void* a, const void* b) {
-	unsigned int n = 0, m = 0;
-	for (unsigned int i = 0; i < strlen(*((char**)a)); i++)
+
+int comp4(const void* a, const void* b)
+{
+	int a1 = strlen(*(char**)a);
+	int a2 = strlen(*(char**)b);
+	return (a1 - a2);
+}
+
+int comp5(const void* a, const void* b)
+{
+	char* str1 = (*(char**)a);
+	char* str2 = (*(char**)b);
+	int l1 = strlen(str1);
+	int l2 = strlen(str2);
+	int a1 = 0;
+	int a2 = 0;
+	for (int i = 0; i < l1; i++)
 	{
-		if ((*((char**)a))[i] == ' ')
-			n++;
+		if (str1[i] == ' ')
+			a1++;
 	}
-	for (unsigned int i = 0; i < strlen(*((char**)b)); i++)
+	for (int i = 0; i < l2; i++)
 	{
-		if ((*((char**)b))[i] == ' ')
-			m++;
+		if (str2[i] == ' ')
+			a2++;
 	}
-	int i = n - m;
-	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
+	return (a1 - a2);
 }
-int comp6(const void* a, const void* b) {
-	int i = ((Person*)a)->age - ((Person*)b)->age;
-	return (i == 0 ? 0 : (i > 0 ? 1 : -1));
+
+int comp6(const void* a, const void* b)
+{
+	unsigned a1 = (*(Person*)a).age;
+	unsigned a2 = (*(Person*)b).age;
+	return (a1 - a2);
 }
