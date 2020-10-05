@@ -1,6 +1,10 @@
+#include <iostream>
 #include <cstdlib>
 #include <string>
 #include <cstring>
+
+using namespace std;
+
 struct Person
 {
     string   name;
