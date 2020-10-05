@@ -35,6 +35,6 @@ int comp5(void* a, void* b) {
 }
 
 int comp6(void* a, void* b) {
-	return ((*(Person*)a)->age - (*(Person*)b)->age);
+	return ((int)(((Person*)a)->age) - (int)(((Person*)b)->age));
 }
 
