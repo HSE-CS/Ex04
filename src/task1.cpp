@@ -11,6 +11,8 @@
 #include <string.h>
 #include <cmath>
 #include <math.h>
+#include <algorithm>
+#include <iostream>
 
 
 int comp1( const void* a, const void* b ) {
