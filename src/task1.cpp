@@ -78,13 +78,11 @@ int comp5(const void* a, const void* b)
 
 int comp6(const void* a, const void* b)
 {
-    Person** fist = (Person**)a;
-    Person* fistr = *fist;
+    Person* fist = (Person*)a;
     
-    Person** two = (Person**)a;
-    Person* twor = *two;
+    Person* two = (Person*)b;
 
-    return (fistr->age - twor->age);
+    return (fist->age - two->age);
 }
 /*
 comp2: вещественное число(сравнение по значению) - тип double
