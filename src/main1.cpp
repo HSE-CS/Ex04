@@ -4,6 +4,7 @@
 #include <ctime>
 #include "task1.h"
 #include <fstream>
+#include <string.h>
 
 using namespace std;
 
