@@ -33,7 +33,7 @@ int comp5(const void* a, const void* b) {
 		if ((*((char**)b))[i] == ' ')
 			m++;
 	}
-	return (n + m);
+	return (n - m);
 };
 
 int comp6(const void* a, const void* b) {
