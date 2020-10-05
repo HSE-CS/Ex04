@@ -7,7 +7,7 @@ int comp1(void* a, void* b) {
 }
 
 int comp2(void* a, void* b) {
-	return (int)((*(double*)a) - (*(double*)b));
+	return ((*(double*)a) - (*(double*)b));
 }
 
 int comp3(void* a, void* b) {
@@ -35,6 +35,6 @@ int comp5(void* a, void* b) {
 }
 
 int comp6(void* a, void* b) {
-	return (int)( (((Person*)a)->age) - (((Person*)b)->age) );
+	return ( (((Person*)a)->age) - (((Person*)b)->age) );
 }
 
