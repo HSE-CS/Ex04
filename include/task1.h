@@ -1,12 +1,15 @@
 #ifndef TASK1_H
 #define TASK1_H
 
+#include <string>
 #include <iostream>
 #include <cmath>
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
-#include <string>
+#include <cstring>
+#include <string.h>
+#include <iterator>
 
 const size_t LARGE_SIZE = 1000000;
 
@@ -24,12 +27,5 @@ struct Person
 };
 
 
-struct rnd
-{
-    int operator()()
-    {
-        return rand() % LARGE_SIZE;
-    }
-};
 
 #endif
