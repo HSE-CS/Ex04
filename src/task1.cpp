@@ -13,16 +13,16 @@ int comp2( const void* a, const void* b ) {
 }
 
 int comp3( const void* a, const void* b ) {
-    return strcmp((char *)a, (char *)b);
+    return strcmp(*(char **)a, *(char **)b);
 }
 
 int comp4(const void *a, const void *b) {
-    return (int)(strlen((char *)a) - strlen((char *)b));
+    return (int)(strlen(*(char **)a) - strlen(*(char **)b));
 }
 
 int comp5(const void *a, const void *b) {
-    return (int)(count((char *)a, (char *)a + strlen((char *)a), ' ') -
-    count((char *)b, (char *)b + strlen((char *)b), ' '));
+    return (int)(count(*(char **)a, *(char **)a + strlen(*(char **)a), ' ') -
+    count(*(char **)b, *(char **)b + strlen(*(char **)b), ' '));
 }
 
 int comp6(const void *a, const void *b) {
