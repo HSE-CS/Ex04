@@ -1,12 +1,12 @@
-#ifndef task1_h
-#define task1_h
-#include <stdio.h>
-#include <cstring>
-#include <string>
+#ifndef TASK1_H
+#define TASK1_H
+#include<string>
+#include <string.h>
 using namespace std;
 
-struct Person {
-    string name;
+struct Person
+{
+    string  name;
     unsigned age;
 };
 
@@ -17,4 +17,4 @@ int comp4(const void* a, const void* b);
 int comp5(const void* a, const void* b);
 int comp6(const void* a, const void* b);
 
-#endif
+#endif // !TASK1_H
