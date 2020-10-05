@@ -41,5 +41,5 @@ int comp5(const void *a, const void *b)
 
 int comp6(const void *a, const void *b)
 {
-    return ((Person *)a - (Person *)b);
+    return (((Person *)a)->age - ((Person *)b)->age);
 };
