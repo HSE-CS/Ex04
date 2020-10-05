@@ -1,3 +1,6 @@
+#include <cstdlib>
+#include <string>
+#include <cstring>
 struct Person
 {
     string   name;

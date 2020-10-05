@@ -1,6 +1,4 @@
-#include <cstdlib>
-#include <string>
-#include <cstring>
+
 #include "task1.h"
 
 int comp1(const void* a, const void* b){
