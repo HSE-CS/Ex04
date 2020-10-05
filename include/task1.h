@@ -6,8 +6,8 @@
 //  Copyright © 2020 Алексей Трутнев. All rights reserved.
 //
 
-#ifndef task1_hpp
-#define task1_hpp
+#ifndef task1_h
+#define task1_h
 #include <stdio.h>
 #include <cstring>
 #include <string>
@@ -25,4 +25,4 @@ int comp4(const void * a, const void * b);
 int comp5(const void * a, const void * b);
 int comp6(const void * a, const void * b);
 
-#endif /* task1_hpp */
+#endif /* task1_h */

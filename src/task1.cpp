@@ -6,7 +6,7 @@
 //  Copyright © 2020 Алексей Трутнев. All rights reserved.
 //
 
-#include "task1.hpp"
+#include "task1.h"
 #include <cstring>
 #include <string.h>
 

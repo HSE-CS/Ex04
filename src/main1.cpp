@@ -6,19 +6,11 @@
 //  Copyright © 2020 Алексей Трутнев. All rights reserved.
 //
 #include <iostream>
-#include "task1.hpp"
+#include "task1.h"
 #include <cstring>
 #include <string.h>
 
 using namespace std;
-
-const size_t LARGE_SIZE = 500000;
-
-struct rnd {
-    int operator()() {
-        return rand() % LARGE_SIZE;
-    }
-};
 
 int main() {
     return 0;
