@@ -17,25 +17,27 @@ int comp2(const void *a, const void *b)
 
 int comp3(const void *a, const void *b)
 {
-    return strcmp(*(char **)a, *(char **)b);
+    return (strcmp(*((char **)a), *((char **)b)));
 };
 
 int comp4(const void *a, const void *b)
 {
-    return (strlen(*(char **)a) - strlen(*(char **)b));
+    return (strlen(*((char **)a)) - strlen(*((char **)b)));
 };
 
 int comp5(const void *a, const void *b)
 {
-    unsigned int c = 0, d = 0, len = 0;
-    len = strlen(*(char **)a);
-    for (int i = 0; i < len; ++i)
+    unsigned int c = 0, d = 0;
+    for (unsigned int i = 0; i < strlen(*((char **)a)); i++)
+    {
         if ((*((char **)a))[i] == ' ')
-            ++c;
-    len = strlen(*(char **)b);
-    for (int i = 0; i < len; ++i)
+            c++;
+    }
+    for (unsigned int i = 0; i < strlen(*((char **)b)); i++)
+    {
         if ((*((char **)b))[i] == ' ')
-            ++d;
+            d++;
+    }
     return (c - d);
 };
 
