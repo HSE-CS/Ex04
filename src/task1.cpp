@@ -1,41 +1,56 @@
 #include "task1.h"
-#include <cstring>
-#include <string.h>
 #include <cmath>
-#include <math.h>
-#include <algorithm>
-#include <iostream>
-
-
-int comp1(const void* a, const void* b) {
-    return (*(int*)a - *(int*)b);
+#include <limits>
+#include<cstring>
+#include<iostream>
+int comp1(const void* a, const void* b)
+{
+	return (*((int*)a)) - (*((int*)b));
+}
+int comp2(const void* a, const  void* b)
+{
+	return (*((double*)a)) - (*((double*)b)) > 0.00000001;
 }
 
-int comp2(const void* a, const void* b) {
-    double eps = 1e-5;
-    if (fabs(*(double*)a - *(double*)b) < eps) return 0;
-    else if (*(double*)a - *(double*)b > eps) return 1;
-    else return -1;
+int comp3(const void* a, const void* b)
+{
+
+	int i = strcmp((*(const char**)a), (*(const char**)b));
+	return i;
 }
 
-int comp3(const void* a, const void* b) {
-    return strcmp(*(char**)a, *(char**)b);
+int comp4(const void* a, const void* b)
+{
+	return (strlen(*(char**)a)) - (strlen(*(char**)b));
 }
-
-int comp4(const void* a, const void* b) {
-    return (int)(strlen(*(char**)a) - strlen(*(char**)b));
+int comp6(const void* a, const void* b)
+{
+	return ((Person*)a)->age - ((Person*)b)->age;
 }
+int comp5(const void* a, const void* b)
+{
+	const char* one = (*(char**)a);
+	const char* two = (*(char**)b);
+	int count1 = 0;
+	int count2 = 0;
 
-int comp5(const void* a, const void* b) {
-    string s1(*(char**)a);
-    string s2(*(char**)b);
-    auto cs1 = count(s1.begin(), s1.end(), ' ');
-    auto cs2 = count(s2.begin(), s2.end(), ' ');
-    if (cs1 > cs2) return 1;
-    else if (cs1 == cs2) return 0;
-    else return -1;
-}
 
-int comp6(const void* a, const void* b) {
-    return (int)(((Person*)a)->age - ((Person*)b)->age);
+
+	for (int i = 0; i < strlen(one) - 1; i++)
+	{
+		char  m[] = { one[i],'\0' };
+
+		if (strcmp(m, " ") == 0)
+			count1++;
+	}
+	for (int i = 0; i < strlen(two) - 1; i++)
+	{
+		char  n[] = { two[i],'\0' };
+
+		if (strcmp(n, " ") == 0)
+			count2++;
+	}
+
+	return count1 - count2;
+
 }
