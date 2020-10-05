@@ -33,17 +33,24 @@ int comp5(const void* a, const void* b)
 	const char * two = (*(char **)b);
 	int count1 = 0;
 	int count2 = 0;
-	for(int i = 0; i < strlen(one); i++)
+
+
+	
+	for(int i = 0; i < strlen(one) - 1; i++)
 	{
+		char  m[] = {one[i],'\0'};
 		
-		if((one[i]) == ' ');
+		if(strcmp(m," ") == 0)
 			count1++;
 	}
-	for(int i = 0; i < strlen(two); i++)
+	for(int i = 0; i < strlen(two)-1; i++)
 	{
-		if((one[i]) == ' ')
+		char  n[] = {two[i],'\0'};
+
+		if(strcmp(n," ") == 0)
 			count2++;
 	}
+
 	return count1-count2;
 	
 }
