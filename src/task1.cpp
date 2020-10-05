@@ -11,10 +11,11 @@ int comp2(const void *a, const void *b)
     {
         return 0;
     }
-    else if ( *(double *) a - *(double *) b) > eps)
+    else if ( *(double *) a - *(double *) b > eps)
     {
         return 1;
-    } else
+    }
+    else
     {
         return -1;
     }
