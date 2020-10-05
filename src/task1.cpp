@@ -7,7 +7,15 @@ int comp1(void* a, void* b) {
 }
 
 int comp2(void* a, void* b) {
-	return static_cast<int>((*(double*)a) - (*(double*)b));
+	if(*(double*)a > *(double*)b) {
+		return 1;
+	}
+	if(*(double*)a < *(double*)b) {
+		return -1;
+	}
+	if(*(double*)a == *(double*)b) {
+		return 0;
+	}
 }
 
 int comp3(void* a, void* b) {
@@ -15,19 +23,19 @@ int comp3(void* a, void* b) {
 }
 
 int comp4(void* a, void* b) {
-	return static_cast<int>(strlen((const char*)a) - strlen((const char*)b));
+	return static_cast<int>(strlen(*(char**)a) - strlen(*(char**)b));
 }
 
 int comp5(void* a, void* b) {
 	int count1 = 0;
 	int count2 = 0;
-	for(int i = 0; ((const char*)a)[i] != '\0'; i++) {
-		if (((const char*)a)[i] == ' ') {
+	for(int i = 0; (*(char**)a)[i] != '\0'; i++) {
+		if ((*(char**)a)[i] == ' ') {
 			count1++;	
 		}
 	}
-	for(int i = 0; ((const char*)b)[i] != '\0'; i++) {
-		if (((const char*)b)[i] == ' ') {
+	for(int i = 0; (*(char**)b)[i] != '\0'; i++) {
+		if ((*(char**)b)[i] == ' ') {
 			count2++;
 		}
 	}
