@@ -1,4 +1,5 @@
-#include "task1.h"
+//#include "task1.h"
+#include "../include/task1.h"
 using namespace std;
 
 int comp1(const void* a, const void* b) {
