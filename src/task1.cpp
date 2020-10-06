@@ -18,7 +18,12 @@ int comp1(const void* a, const void* b) {
 }
 
 int comp2(const void* a, const void* b) {
-    return int (*(double*)a - *(double *)b);
+    if ((*(double*)a - *(double*)b) > 0)
+        return 1;
+    else if ((*(double*)a - *(double*)b) < 0)
+        return -1;
+    else if ((*(double*)a - *(double*)b) == 0)
+        return 0;
 }
 
 int comp3(const void* a, const void* b) {
