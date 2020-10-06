@@ -1,5 +1,3 @@
-#ifndef TASK1.H
-#define TASK1.H
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -17,5 +15,3 @@ int comp3(const void* s1_n, const void* s2_n);
 int comp4(const void* s1_n, const void* s2_n);
 int comp5(const void* s1_n, const void* s2_n);
 int comp6(const void* p1_n, const void* p2_n);
-
-#endif
