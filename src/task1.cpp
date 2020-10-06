@@ -41,9 +41,9 @@ int comp4(const void* a, const void* b) {
 }
 
 int comp5(const void* a, const void* b) {
-    std::string str1(*(char**)a);
-    std::string str2(*(char**)b);
-    return std::count(str1.begin(), str2.end(), ' ') - count(str2.begin(), str2.end(), ' ');
+    string str1(*(char**)a);
+    string str2(*(char**)b);
+    return count(str1.begin(), str1.end(), ' ') - count(str2.begin(), str2.end(), ' ');
 }
 
 int comp6(const void* a, const void* b) {
