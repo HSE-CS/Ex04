@@ -18,25 +18,25 @@ int comp2(const void* a, const void* b) {
 }
 
 int comp3(const void* a, const void* b) {
-	return strcmp((const char*)a, (const char*)b);
+	return strcmp(*(char**)a, *(char**)b);
 }
 
 int comp4(const void* a, const void* b) {
-	return static_cast<int>( strlen((const char*)a) - strlen((const char*)b) );
+	return static_cast<int>( strlen(*(char**)a) - strlen(*(char**)b) );
 }
 
 int comp5(const void* a, const void* b) {
 	int _space1 = 0;
 	int _space2 = 0;
 
-	for (int i = 0; ((const char*)a)[i] != '\0'; i++) {
-		if ( ((const char*)a)[i] == ' ' ) {
+	for (int i = 0; (*(char**)a)[i] != '\0'; i++) {
+		if ( (*(char**)a)[i] == ' ' ) {
 			_space1++;
 		}
 	}
 
-	for (int i = 0; ((const char*)b)[i] != '\0'; i++) {
-		if (((const char*)b)[i] == ' ') {
+	for (int i = 0; (*(char**)b)[i] != '\0'; i++) {
+		if ((*(char**)b)[i] == ' ') {
 			_space2++;
 		}
 	}
