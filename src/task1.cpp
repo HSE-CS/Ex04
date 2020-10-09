@@ -17,6 +17,7 @@ int comp2(const void* a, const void* b)
 		return -1;
 	else
 		return 0;
+
 }
 
 int comp3(const void* a, const void* b) {
