@@ -4,7 +4,7 @@
 
 struct Person
 {
-    char*   name;
+    std::string   name;
     unsigned age;
 };
 int comp1( const void* a, const void* b );
