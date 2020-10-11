@@ -5,7 +5,7 @@
 #include <cstring>
 #include "task1.h"
 
-
+using namespace std; 
 
 int comp1( const void* a, const void* b ) {
     return ( *( int* )a - *( int* )b );
