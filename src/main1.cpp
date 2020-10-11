@@ -1,7 +1,9 @@
+#include <algorithm>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include "task1.h"
 
-#include "task1.hpp"
-#include <cstring>
-#include <string.h>
 
 using namespace std;
 
