@@ -5,13 +5,7 @@
 #include <cstring>
 #include "task1.h"
 
-using namespace std; 
 
-struct Person
-{
-    string   name;
-    unsigned age;
-};
 
 int comp1( const void* a, const void* b ) {
     return ( *( int* )a - *( int* )b );
