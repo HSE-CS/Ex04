@@ -1,10 +1,6 @@
 #ifndef Task1_H
 #define Task1_H
-struct Person
-{
-    string   name;
-    unsigned age;
-};
+
 int comp1( const void* a, const void* b );
 int comp2( const void* a, const void* b );
 int comp3( const void* a, const void* b );
