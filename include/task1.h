@@ -1,5 +1,6 @@
 #ifndef Task1_H
 #define Task1_H
+#include <string>
 
 using namespace std; 
 struct Person
