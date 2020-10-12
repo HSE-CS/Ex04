@@ -12,7 +12,10 @@ int comp1( const void* a, const void* b ) {
 }
 
 int comp2( const void* a, const void* b ) {
-    return ( *( double* )a - *( double* )b );
+	double t=*( double* )a - *( double* )b ;
+	if (t==0) return 0;
+	if (t<0) return -1;
+	if (t>0) return 1;
 }
 int comp3( const void* a, const void* b ) {
     const char** s1 = (const char**) a;
