@@ -1,10 +1,10 @@
 #ifndef Task1_H
 #define Task1_H
 
-
+using namespace std; 
 struct Person
 {
-    std::string   name;
+    string   name;
     unsigned age;
 };
 int comp1( const void* a, const void* b );
