@@ -38,16 +38,16 @@ int comp4( const void* a, const void* b ) {
 }
 
 int comp5( const void* a, const void* b ) {
-	string s1 = (const char*) a;
-	string s2 = (const char*) b;
+	const char* s1 = (const char*) a;
+	const char* s2 = (const char*) b;
 	int i=0;
-	while (s1[i]!='\0'){
-		if (s1[i]==' ') i++;
+	for (int j=strlen(s1);j>-1;j--){
+		if (s1[j]==' ') i++;
 	}
 	int len1=i;
 	i=0;
-	while (s2[i]!='\0'){
-		if (s2[i]==' ') i++;
+	for (int j=strlen(s2);j>-1;j--){
+		if (s2[j]==' ') i++;
 	}
 	int len2=i;
 	if (len1==len2)
