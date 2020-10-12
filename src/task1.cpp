@@ -29,7 +29,7 @@ int comp5(const void* a, const void* b) {
 }
 
 int comp6(const void* a, const void* b) {
-	return ((int)(unsigned((Person*)a->age) - unsigned((Person*)b->age)));
+	return ((int)(((Person*)a)->age - ((Person*)b)->age));
 }
 
 void Proga(int sizeNew) {

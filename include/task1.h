@@ -31,7 +31,7 @@ int comp2(const void* a, const void* b);
 int comp3(const void* a, const void* b);
 int comp4(const void* a, const void* b);
 int comp5(const void* a, const void* b);
-int comp6(const Person* a, const Person* b);
+int comp6(const void* a, const void* b);
 void Proga(int sizeNew);
 
 #endif //TASK1_H
