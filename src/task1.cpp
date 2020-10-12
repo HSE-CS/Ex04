@@ -25,11 +25,19 @@ int comp2(const void* a, const void* b) {
 }
 
 int comp3(const void* a, const void* b) {
+<<<<<<< HEAD
 	return strcmp(*(char**)a, *(char**)b);
 }
 
 int comp4(const void* a, const void* b) {
 	return (int)(strlen(*(char**)a) - strlen(*(char**)b));
+=======
+	return strcmp((const char*)a, (const char*)b);
+}
+
+int comp4(const void* a, const void* b) {
+	return (strlen((const char*)a) - strlen((const char*)b));
+>>>>>>> 5ca449afec6533351ff5d622d17878823a21c295
 }
 
 int comp5(const void* a, const void* b) {

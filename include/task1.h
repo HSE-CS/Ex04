@@ -22,5 +22,8 @@ int comp5(const void* a, const void* b);
 
 int comp6(const void* a, const void* b);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ca449afec6533351ff5d622d17878823a21c295
 #endif
