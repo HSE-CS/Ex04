@@ -37,24 +37,16 @@ int comp4( const void* a, const void* b ) {
 			return 1;
 }
 
-int comp5( const void* a, const void* b ) {
-	const char** s1 = (const char**) a;
-	const char** s2 = (const char**) b;
-	int len1=0;
-	for (int j=0;j<strlen(*s1);j++){
-		if (**s1+j==' ') len1++;
-	}
-	int len2=0;
-	for (int j=0;j<strlen(*s2);j++){
-		if (**s2+j==' ') len2++;
-	}
-	if (len1==len2)
-		return 0;
-	else
-		if (len1<len2)
-			return -1;
-		else
-			return 1;
+static int countSpaces(const char *s) {
+    int counter = 0;
+    for (int i = 0; i < strlen(s); i++)
+        if (s[i] == ' ')
+            counter++;
+    return counter;
+}
+
+int comp5(const void *a, const void *b) {
+    return countSpaces(*(const char **) a) - countSpaces(*(const char **) b);
 }
 int comp6(const void *a, const void *b) 
 
