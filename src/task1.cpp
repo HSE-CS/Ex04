@@ -1,5 +1,6 @@
 #include <iostream>
-#include <string>
+#include <cstring>
+#include <algorithm>
 #include "task1.h"
 
 using namespace std;
@@ -24,8 +25,8 @@ int comp4(const void* a, const void* b) {
 }
 
 int comp5(const void* a, const void* b) {
-  string s1 = (*(char**)a);
-  string s2 = (*(char**)b);
+  string s1(*(char**)a);
+  string s2(*(char**)b);
   auto cs1 = count(str1.begin(), str1.end(), ' ');
   auto cs2 = count(str2.begin(), str2.end(), ' ');
   if (cs1 > cs2) 
