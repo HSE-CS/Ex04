@@ -27,9 +27,13 @@ int comp4(const void* a, const void* b) {
 int comp5(const void* a, const void* b) {
 	string first = *(const char**)a;
 	string second = *(const char**)a;
-	int firstcount = count(first.begin(), first.end(), ' ');
-	int secondcount = count(second.begin(), second.end(), ' ');
-	return firstcount - secondcount;
+	auto firstcount = count(first.begin(), first.end(), ' ');
+	auto secondcount = count(second.begin(), second.end(), ' ');
+	if (firstcount > secondcount)
+		return 1;
+	else if (firstcount < secondcount)
+		return -1;
+	else return 0;
 }
 int comp6(const void* a, const void* b) {
 	return (*(Person*)a).age - (*(Person*)b).age;
