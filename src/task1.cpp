@@ -25,14 +25,12 @@ int comp4(const void* a, const void* b) {
 	return strlen(*(const char**)a) - strlen(*(const char**)b);
 }
 int comp5(const void* a, const void* b) {
-	string first = *(const char**)a;
-	string second = *(const char**)a;
-	auto firstcount = count(first.begin(), first.end(), ' ');
-	auto secondcount = count(second.begin(), second.end(), ' ');
-	if (firstcount > secondcount)
-		return 1;
-	else if (firstcount < secondcount)
-		return -1;
+	string str1(*(char**)a);
+	string str2(*(char**)b);
+	auto countstr1 = count(str1.begin(), str1.end(), ' ');
+	auto countstr2 = count(str2.begin(), str2.end(), ' ');
+	if (countstr1 > countstr2) return 1;
+	else if (countstr1 << countstr2) return -1;
 	else return 0;
 }
 int comp6(const void* a, const void* b) {
