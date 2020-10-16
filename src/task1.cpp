@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "Task1.h"
+#include "task1.h"
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
