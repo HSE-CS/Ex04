@@ -1,11 +1,11 @@
 // Ai ... Aj
-// >0 если Ai > Aj
-// =0 если равны
-// <0 если Ai < Aj
+// >0 ГҐГ±Г«ГЁ Ai > Aj
+// =0 ГҐГ±Г«ГЁ Г°Г ГўГ­Г»
+// <0 ГҐГ±Г«ГЁ Ai < Aj
 // int comp(const void* a, const void* b)
 
 #define _CRT_SECURE_NO_WARNINGS
-#include "Task1.h"
+#include "task1.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
