@@ -4,7 +4,7 @@
 #include <math.h>
 #include <time.h>
 #include <stdlib.h>
-#include <string>
+#include <string.h>
 #include <algorithm>
 #include <iostream>
 #include <cstring>
